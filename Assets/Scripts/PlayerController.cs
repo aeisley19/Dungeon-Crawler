@@ -4,9 +4,12 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float runSpd;
+    [SerializeField] private PlayerAttacker attack;
+
     private Animator animator;
     private Vector3 input;
     private bool isMoving;
+    private bool isAttacking;
 
     void Awake()
     {
@@ -19,8 +22,14 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
+        isAttacking = Input.GetKeyDown(KeyCode.Z);
+
         transform.position += input * runSpd * Time.deltaTime;
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            animator.SetBool("isAttacking", isAttacking);
+        }
         if (input != new Vector3(0, 0))
         {
             animator.SetFloat("moveX", input.x);
@@ -31,7 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             isMoving = false;
         }
-        
+
         animator.SetBool("isMoving", isMoving);
     }
 }
