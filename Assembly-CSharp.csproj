@@ -65,8 +65,14 @@
     <Analyzer Include="/home/alex/Unity/Hub/Editor/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/AbstractStateMachine.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/KeyboardInput.cs" />
     <Compile Include="Assets/Scripts/PlayerAttacker.cs" />
+    <Compile Include="Assets/Scripts/PlayerStateManager.cs" />
+    <Compile Include="Assets/Scripts/StateManager.cs" />
+    <Compile Include="Assets/Scripts/AbstractState.cs" />
+    <Compile Include="Assets/Scripts/PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/1_Pixel Art Top Down - Basic v1.2.1/Changelog.txt" />

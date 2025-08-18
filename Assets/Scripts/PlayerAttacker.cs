@@ -11,6 +11,7 @@ public class PlayerAttacker : MonoBehaviour
 
     public void Attack()
     {
+        print("Attack triggered");
         animator.SetBool("isAttacking", true);
     }
 
