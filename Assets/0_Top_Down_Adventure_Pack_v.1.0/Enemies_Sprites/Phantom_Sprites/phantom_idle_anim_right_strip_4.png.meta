@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      phantom_idle_anim_right_strip_4_0: 5312428451507328441
+      phantom_idle_anim_right_strip_4_1: 3010108412618056395
+      phantom_idle_anim_right_strip_4_2: -4408528444297098564
+      phantom_idle_anim_right_strip_4_3: -3385823658217346026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

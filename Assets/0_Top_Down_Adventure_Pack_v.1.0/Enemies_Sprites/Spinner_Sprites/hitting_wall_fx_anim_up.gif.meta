@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hitting_wall_fx_anim_up_0: 7432018399811238992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

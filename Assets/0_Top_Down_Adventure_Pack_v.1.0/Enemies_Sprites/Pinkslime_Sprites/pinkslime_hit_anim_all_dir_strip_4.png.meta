@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkslime_hit_anim_all_dir_strip_4_0: -248159589094890971
+      pinkslime_hit_anim_all_dir_strip_4_1: -3581641108217294077
+      pinkslime_hit_anim_all_dir_strip_4_2: -7975504501025959700
+      pinkslime_hit_anim_all_dir_strip_4_3: 5674447087827602304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

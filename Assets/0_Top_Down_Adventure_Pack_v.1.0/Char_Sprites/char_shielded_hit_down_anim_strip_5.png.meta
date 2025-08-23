@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_shielded_hit_down_anim_strip_5_0: -1590446392425960142
+      char_shielded_hit_down_anim_strip_5_1: 2870916755921882715
+      char_shielded_hit_down_anim_strip_5_2: 2073132329604223249
+      char_shielded_hit_down_anim_strip_5_3: 3400038385605248755
+      char_shielded_hit_down_anim_strip_5_4: 763271648306800227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

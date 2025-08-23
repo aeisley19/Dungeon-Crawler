@@ -872,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomberplant_spritesheet_0: -3265455462658754792
+      bomberplant_spritesheet_1: 901830746187946279
+      bomberplant_spritesheet_10: -7658943213730938882
+      bomberplant_spritesheet_11: -4469828081697643085
+      bomberplant_spritesheet_12: 2725811207585092958
+      bomberplant_spritesheet_13: 2741734702874476768
+      bomberplant_spritesheet_14: -3647958890059297507
+      bomberplant_spritesheet_15: -5265932567057291237
+      bomberplant_spritesheet_16: 3619322912442520011
+      bomberplant_spritesheet_17: 6256558152470812223
+      bomberplant_spritesheet_18: -7153153539158181257
+      bomberplant_spritesheet_19: 167046841596188336
+      bomberplant_spritesheet_2: 5106457435009321356
+      bomberplant_spritesheet_20: 7250968866791525601
+      bomberplant_spritesheet_21: -2417437029178296325
+      bomberplant_spritesheet_22: 9168822371414861172
+      bomberplant_spritesheet_23: 4050955274560991287
+      bomberplant_spritesheet_24: 495121401266440111
+      bomberplant_spritesheet_25: -3489484709402202476
+      bomberplant_spritesheet_26: 4444945254574229369
+      bomberplant_spritesheet_27: -3491899962242597026
+      bomberplant_spritesheet_28: -3890578169771735503
+      bomberplant_spritesheet_29: -1535629694460587236
+      bomberplant_spritesheet_3: 7073299224525518235
+      bomberplant_spritesheet_4: 6034132118336282743
+      bomberplant_spritesheet_5: -6687092995703419852
+      bomberplant_spritesheet_6: -1346196500430956918
+      bomberplant_spritesheet_7: -6327703796601921364
+      bomberplant_spritesheet_8: -4299522733546350950
+      bomberplant_spritesheet_9: 8425044081495741050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

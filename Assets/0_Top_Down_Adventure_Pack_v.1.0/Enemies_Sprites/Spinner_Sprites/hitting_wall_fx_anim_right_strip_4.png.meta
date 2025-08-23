@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hitting_wall_fx_anim_right_strip_4_0: 2028973329702467961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

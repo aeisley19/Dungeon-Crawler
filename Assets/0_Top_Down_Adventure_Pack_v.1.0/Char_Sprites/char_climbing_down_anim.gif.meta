@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_climbing_down_anim_0: -2939764474852670195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

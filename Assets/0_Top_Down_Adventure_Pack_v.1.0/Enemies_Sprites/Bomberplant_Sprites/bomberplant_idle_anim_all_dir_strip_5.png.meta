@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomberplant_idle_anim_all_dir_strip_5_0: -5428220307675874484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

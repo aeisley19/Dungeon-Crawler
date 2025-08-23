@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomberplant_hit_anim_all_dir_0: -5628279688187275153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomb_going_down_anim_strip_4_0: -944617369826739789
+      bomb_going_down_anim_strip_4_1: 6897910099541731786
+      bomb_going_down_anim_strip_4_2: -5586960332395071160
+      bomb_going_down_anim_strip_4_3: -5608773183601051532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

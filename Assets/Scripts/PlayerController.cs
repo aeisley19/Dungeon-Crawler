@@ -3,12 +3,18 @@ using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/*public enum PlayerStates
+{
+    IdleState,
+    WalkState,
+    attackState
+}*/
 public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float runSpd;
     [SerializeField] private PlayerAttacker attack;
-    [SerializeField] private Animator animator; 
+    [SerializeField] private Animator animator;
 
     private Vector3 input;
     private bool isMoving;
@@ -17,20 +23,14 @@ public class PlayerController : MonoBehaviour
     private KeyboardInput inputHandler;
     private PlayerMovement move;
     private PlayerStates currentState;
-    
-    public enum PlayerStates
-    {
-        IdleState,
-        WalkState,
-        attackState
-    }
 
     void Awake()
     {
-        currentState = PlayerStates.IdleState; 
+        currentState = PlayerStates.IdleState;
         rb = GetComponent<Rigidbody2D>();
         inputHandler = new KeyboardInput();
         move = new PlayerMovement(rb, runSpd);
+        attack = GetComponent<PlayerAttacker>();
     }
 
     // Update is called once per frame
@@ -61,5 +61,5 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("isMoving", isMoving);
     }
-    
+
 }

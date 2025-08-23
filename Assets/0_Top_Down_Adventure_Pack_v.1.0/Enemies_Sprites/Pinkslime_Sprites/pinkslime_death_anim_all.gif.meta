@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkslime_death_anim_all_0: -1055754751470938633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

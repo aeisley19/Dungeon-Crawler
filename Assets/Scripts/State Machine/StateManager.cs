@@ -6,7 +6,7 @@ using System;
 
 public abstract class StateManager<EState> : MonoBehaviour where EState : Enum
 {
-    protected Dictionary<EState, AbstractState<EState>> States;
+    protected Dictionary<EState, AbstractState<EState>> states;
     protected AbstractState<EState> currentState;
     protected bool isTransitioningStates = false;
 
@@ -21,37 +21,25 @@ public abstract class StateManager<EState> : MonoBehaviour where EState : Enum
     {
         EState nextStateKey = currentState.GetNextState();
 
-        if (currentState.Equals(currentState.GetNextState()))
+        if (nextStateKey.Equals(currentState.StateKey))
         {
             currentState.UpdateState();
         }
-        else if(!isTransitioningStates)
+        else if (!isTransitioningStates)
         {
-            TransitionToState(nextStateKey);   
+            print("transition");
+            TransitionToState(nextStateKey);
         }
+
+        print(currentState);
     }
 
     public void TransitionToState(EState stateKey)
     {
         isTransitioningStates = true;
         currentState.ExitState();
-        currentState = States[stateKey];
+        currentState = states[stateKey];
         currentState.EnterState();
         isTransitioningStates = false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        currentState.OnTriggerEnter(other);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        currentState.OnTriggerStay(other);
-    }
-
-    private  void OnTriggerExit(Collider other)
-    {
-        currentState.OnTriggerExit(other);
     }
 }

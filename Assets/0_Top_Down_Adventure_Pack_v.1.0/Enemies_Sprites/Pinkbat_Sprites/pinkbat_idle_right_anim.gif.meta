@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkbat_idle_right_anim_0: 6551684399030360494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

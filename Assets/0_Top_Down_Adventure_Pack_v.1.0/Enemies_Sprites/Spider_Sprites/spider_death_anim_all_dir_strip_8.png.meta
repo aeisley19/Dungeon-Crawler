@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider_death_anim_all_dir_strip_8_0: -5617040419756757669
+      spider_death_anim_all_dir_strip_8_1: -5197724514596737643
+      spider_death_anim_all_dir_strip_8_2: 832681397500467645
+      spider_death_anim_all_dir_strip_8_3: -5093451977472325112
+      spider_death_anim_all_dir_strip_8_4: -2324989343992174280
+      spider_death_anim_all_dir_strip_8_5: -6204299411186597867
+      spider_death_anim_all_dir_strip_8_6: -8185868948550803258
+      spider_death_anim_all_dir_strip_8_7: -4070513660695762046
+      spider_death_anim_all_dir_strip_8_8: -3513241025401511292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

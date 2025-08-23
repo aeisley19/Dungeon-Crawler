@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkslime_run_anim_anim_all_dir_strip_6_0: -1330419349353706878
+      pinkslime_run_anim_anim_all_dir_strip_6_1: -6935081036878651167
+      pinkslime_run_anim_anim_all_dir_strip_6_2: 6588566388587332857
+      pinkslime_run_anim_anim_all_dir_strip_6_3: 9164908304787194174
+      pinkslime_run_anim_anim_all_dir_strip_6_4: -7063519916307877741
+      pinkslime_run_anim_anim_all_dir_strip_6_5: 7276748495898782561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

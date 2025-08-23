@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_falling_all_dir_anim_0: 8736745720042618755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

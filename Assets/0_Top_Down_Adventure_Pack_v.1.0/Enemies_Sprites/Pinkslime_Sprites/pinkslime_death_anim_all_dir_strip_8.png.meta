@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkslime_death_anim_all_dir_strip_8_0: -8320850390699960378
+      pinkslime_death_anim_all_dir_strip_8_1: 4591080328900260868
+      pinkslime_death_anim_all_dir_strip_8_2: -3022856101407064435
+      pinkslime_death_anim_all_dir_strip_8_3: -6614114282850703813
+      pinkslime_death_anim_all_dir_strip_8_4: 2261691769726961077
+      pinkslime_death_anim_all_dir_strip_8_5: -8049020436425425073
+      pinkslime_death_anim_all_dir_strip_8_6: -7657247251772475988
+      pinkslime_death_anim_all_dir_strip_8_7: 4828755346143888261
+      pinkslime_death_anim_all_dir_strip_8_8: 4179776647224767876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

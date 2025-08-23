@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider_hit_anim_all_dir_0: 3454509203196697995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

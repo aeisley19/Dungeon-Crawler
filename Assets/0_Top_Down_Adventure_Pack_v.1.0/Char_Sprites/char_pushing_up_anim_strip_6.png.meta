@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_pushing_up_anim_strip_6_0: -316946224488337931
+      char_pushing_up_anim_strip_6_1: 7842046986321988520
+      char_pushing_up_anim_strip_6_2: -6059592642532340474
+      char_pushing_up_anim_strip_6_3: -4651100890769138938
+      char_pushing_up_anim_strip_6_4: -7726368844744643792
+      char_pushing_up_anim_strip_6_5: 3896341115168518727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

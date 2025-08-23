@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomb_going_up_anim_0: 5226651589120188102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

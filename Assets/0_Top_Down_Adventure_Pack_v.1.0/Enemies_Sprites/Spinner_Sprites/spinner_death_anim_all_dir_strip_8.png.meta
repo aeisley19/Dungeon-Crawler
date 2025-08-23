@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spinner_death_anim_all_dir_strip_8_0: -5612131725693785613
+      spinner_death_anim_all_dir_strip_8_1: 2720819959073261790
+      spinner_death_anim_all_dir_strip_8_2: 7498109324720742773
+      spinner_death_anim_all_dir_strip_8_3: -1998026213439696649
+      spinner_death_anim_all_dir_strip_8_4: 8150466887174467585
+      spinner_death_anim_all_dir_strip_8_5: -4562990476443993621
+      spinner_death_anim_all_dir_strip_8_6: 3256455571693779865
+      spinner_death_anim_all_dir_strip_8_7: -2018145064725166221
+      spinner_death_anim_all_dir_strip_8_8: 1588338734868167970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

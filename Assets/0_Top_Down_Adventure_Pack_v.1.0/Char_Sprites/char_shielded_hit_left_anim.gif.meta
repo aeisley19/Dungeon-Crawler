@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_shielded_hit_left_anim_0: -4308649894894269329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

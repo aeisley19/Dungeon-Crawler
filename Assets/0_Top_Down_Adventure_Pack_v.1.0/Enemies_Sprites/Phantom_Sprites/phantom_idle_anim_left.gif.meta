@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      phantom_idle_anim_left_0: 4713607689913704189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkbat_death_anim_right_strip_8_0: 3281610887893923421
+      pinkbat_death_anim_right_strip_8_1: -7657459070618067988
+      pinkbat_death_anim_right_strip_8_2: 6118309935343985055
+      pinkbat_death_anim_right_strip_8_3: 7035544273075926158
+      pinkbat_death_anim_right_strip_8_4: 219983666613880533
+      pinkbat_death_anim_right_strip_8_5: -6662872419704377427
+      pinkbat_death_anim_right_strip_8_6: 4581529919170213813
+      pinkbat_death_anim_right_strip_8_7: -8264008501578621823
+      pinkbat_death_anim_right_strip_8_8: -7134350683564425636
+      pinkbat_death_anim_right_strip_8_9: 4445592737373418932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

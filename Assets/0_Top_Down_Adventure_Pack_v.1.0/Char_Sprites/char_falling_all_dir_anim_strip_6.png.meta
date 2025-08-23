@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      char_falling_all_dir_anim_strip_6_0: -9037495112329047465
+      char_falling_all_dir_anim_strip_6_1: 952482243652751562
+      char_falling_all_dir_anim_strip_6_2: -8715940530216112640
+      char_falling_all_dir_anim_strip_6_3: 4677077084124470230
+      char_falling_all_dir_anim_strip_6_4: -1038534824173499645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

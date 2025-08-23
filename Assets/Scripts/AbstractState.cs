@@ -2,12 +2,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System;
 
-public abstract class AbstractStateMachine<EState> where EState : Enum
+public abstract class AbstractState<EState> where EState : Enum
 {
-    public abstract void EnterState();
-    public abstract void ExitState();
-    public abstract void UpdateState();
+    protected PlayerContext ctx;
+
+
+    public AbstractState(EState state)
+    {
+          StateKey = state;
+    }
+
+    public EState StateKey { get; private set; }
+    public virtual void EnterState() { }
+    public virtual void ExitState() {}
+    public virtual void UpdateState() {}
     public abstract EState GetNextState();
-    public abstract void OnTriggerStay();
-    public abstract void OnTriggerExit();
 }

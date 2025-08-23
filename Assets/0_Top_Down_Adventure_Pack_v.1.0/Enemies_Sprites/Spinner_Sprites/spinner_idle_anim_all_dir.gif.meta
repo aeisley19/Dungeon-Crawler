@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spinner_idle_anim_all_dir_0: 9111592196196075835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

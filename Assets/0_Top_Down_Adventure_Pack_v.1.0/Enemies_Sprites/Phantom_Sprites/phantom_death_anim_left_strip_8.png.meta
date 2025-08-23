@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      phantom_death_anim_left_strip_8_0: -7896795846660944492
+      phantom_death_anim_left_strip_8_1: 2089348739048557531
+      phantom_death_anim_left_strip_8_2: -718137021037059521
+      phantom_death_anim_left_strip_8_3: 6214094533247154056
+      phantom_death_anim_left_strip_8_4: 3959531468730484044
+      phantom_death_anim_left_strip_8_5: -6604060399134988267
+      phantom_death_anim_left_strip_8_6: 6701786120130240387
+      phantom_death_anim_left_strip_8_7: -8777824731843961388
+      phantom_death_anim_left_strip_8_8: -1068252006905607262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

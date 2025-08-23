@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomberplant_attack_anim_all_dir_0: 7154994693144822715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

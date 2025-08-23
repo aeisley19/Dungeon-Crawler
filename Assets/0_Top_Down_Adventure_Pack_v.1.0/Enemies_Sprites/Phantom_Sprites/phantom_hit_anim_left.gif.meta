@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      phantom_hit_anim_left_0: -2185485059703753671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

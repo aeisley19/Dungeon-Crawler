@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider_death_anim_all_dir_0: 5359441031954208360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

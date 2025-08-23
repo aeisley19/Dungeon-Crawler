@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkbat_run_attack_left_anim_strip_3_0: 7578633740227332738
+      pinkbat_run_attack_left_anim_strip_3_1: -1448979302542050728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

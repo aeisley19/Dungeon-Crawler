@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spinner_hit_anim_all_dir_strip_4_0: 9136697465706652423
+      spinner_hit_anim_all_dir_strip_4_1: 8777910721115955753
+      spinner_hit_anim_all_dir_strip_4_2: 561037446125445866
+      spinner_hit_anim_all_dir_strip_4_3: -5180235937845876767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

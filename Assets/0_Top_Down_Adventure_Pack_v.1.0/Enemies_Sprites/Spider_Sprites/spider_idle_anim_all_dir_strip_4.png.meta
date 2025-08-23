@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider_idle_anim_all_dir_strip_4_0: -4773753229665449567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

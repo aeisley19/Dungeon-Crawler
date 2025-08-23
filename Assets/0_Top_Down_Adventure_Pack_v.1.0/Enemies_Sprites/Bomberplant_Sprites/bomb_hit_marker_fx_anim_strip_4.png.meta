@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bomb_hit_marker_fx_anim_strip_4_0: -2301949248631074691
+      bomb_hit_marker_fx_anim_strip_4_1: 2892978750073009336
+      bomb_hit_marker_fx_anim_strip_4_2: 8579666523208823581
+      bomb_hit_marker_fx_anim_strip_4_3: 3853065063304557529
+      bomb_hit_marker_fx_anim_strip_4_4: -3462834155763139305
+      bomb_hit_marker_fx_anim_strip_4_5: -5215837331547444602
+      bomb_hit_marker_fx_anim_strip_4_6: -1675144757285682254
+      bomb_hit_marker_fx_anim_strip_4_7: -2298294526136447583
+      bomb_hit_marker_fx_anim_strip_4_8: -5424923909824299660
+      bomb_hit_marker_fx_anim_strip_4_9: -8006384797578478457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

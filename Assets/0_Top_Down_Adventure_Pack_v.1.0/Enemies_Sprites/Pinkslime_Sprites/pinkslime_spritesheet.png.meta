@@ -747,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkslime_spritesheet_0: -8706756581415555371
+      pinkslime_spritesheet_1: -4655576930009784091
+      pinkslime_spritesheet_10: 6614728410770868165
+      pinkslime_spritesheet_11: 4537999392940071365
+      pinkslime_spritesheet_12: 1828017404825761262
+      pinkslime_spritesheet_13: 972657485013923086
+      pinkslime_spritesheet_14: -842198164848053137
+      pinkslime_spritesheet_15: 3524945279117230991
+      pinkslime_spritesheet_16: -1863392023923008723
+      pinkslime_spritesheet_17: -3483453160218653975
+      pinkslime_spritesheet_18: 6679030271305027513
+      pinkslime_spritesheet_19: -8274797974412837861
+      pinkslime_spritesheet_2: 3779053730392277067
+      pinkslime_spritesheet_20: -4580469323770858788
+      pinkslime_spritesheet_21: -4917534863366436996
+      pinkslime_spritesheet_22: 1193263378288080944
+      pinkslime_spritesheet_23: 7191905637056844783
+      pinkslime_spritesheet_24: 5506040732798747529
+      pinkslime_spritesheet_3: 2062193491650297355
+      pinkslime_spritesheet_4: -2769725358824098029
+      pinkslime_spritesheet_5: 2499687378794890539
+      pinkslime_spritesheet_6: -8235138385628999238
+      pinkslime_spritesheet_7: 3176732662341343189
+      pinkslime_spritesheet_8: -6141630809119785284
+      pinkslime_spritesheet_9: 5676542510419295565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

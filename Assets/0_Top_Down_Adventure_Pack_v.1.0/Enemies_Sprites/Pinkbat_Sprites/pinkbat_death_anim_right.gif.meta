@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkbat_death_anim_right_0: -3953944868120614651
+      pinkbat_death_anim_right_1: 2378046218351412707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

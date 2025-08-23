@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider_spritesheet_0: 3963239019028892749
+      spider_spritesheet_1: 7432796771117950109
+      spider_spritesheet_10: -5503369545075204969
+      spider_spritesheet_11: 1240558158806111223
+      spider_spritesheet_12: 1068965929472964470
+      spider_spritesheet_13: 6128713408413536929
+      spider_spritesheet_14: -3074097132911341107
+      spider_spritesheet_2: 2850625901149325257
+      spider_spritesheet_3: 4828013660601284994
+      spider_spritesheet_4: -5038644933642356911
+      spider_spritesheet_5: 7175327662696506143
+      spider_spritesheet_6: 7178501752612788991
+      spider_spritesheet_7: -375483506418693886
+      spider_spritesheet_8: 8077391884932095751
+      spider_spritesheet_9: -3832718115553094016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
