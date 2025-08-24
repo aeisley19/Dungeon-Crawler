@@ -14,9 +14,8 @@ public class PlayerStateManager : StateManager<PlayerStates>
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     private KeyboardInput inputHandler;
-    private Vector2 input;
-
-    PlayerContext ctx;
+    private PlayerContext ctx;
+    private bool isMoving;
 
     private void Awake()
     {
@@ -27,7 +26,7 @@ public class PlayerStateManager : StateManager<PlayerStates>
         {
             {PlayerStates.IdleState, new PlayerIdleState(ctx)},
             {PlayerStates.WalkState, new PlayerWalkState(ctx)},
-            {PlayerStates.attackState, new PlayerAttackState()}
+            {PlayerStates.attackState, new PlayerAttackState(ctx)}
 
         };
 

@@ -6,7 +6,6 @@ public abstract class AbstractState<EState> where EState : Enum
 {
     protected PlayerContext ctx;
 
-
      public AbstractState(EState state)
     {
           StateKey = state;

@@ -21,15 +21,8 @@ public abstract class StateManager<EState> : MonoBehaviour where EState : Enum
     {
         EState nextStateKey = currentState.GetNextState();
 
-        if (nextStateKey.Equals(currentState.StateKey))
-        {
-            currentState.UpdateState();
-        }
-        else if (!isTransitioningStates)
-        {
-            print("transition");
-            TransitionToState(nextStateKey);
-        }
+        if (nextStateKey.Equals(currentState.StateKey)) currentState.UpdateState();
+        else if (!isTransitioningStates) TransitionToState(nextStateKey);
 
         print(currentState);
     }

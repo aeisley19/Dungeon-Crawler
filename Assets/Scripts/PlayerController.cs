@@ -27,9 +27,9 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         currentState = PlayerStates.IdleState;
-        rb = GetComponent<Rigidbody2D>();
         inputHandler = new KeyboardInput();
         move = new PlayerMovement(rb, runSpd);
+        rb = GetComponent<Rigidbody2D>();
         attack = GetComponent<PlayerAttacker>();
     }
 

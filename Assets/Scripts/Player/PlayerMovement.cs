@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement
 {
-    private Rigidbody2D rb;
-    private float runSpeed;
+    private readonly Rigidbody2D rb;
+    private readonly float runSpeed;
 
     public PlayerMovement(Rigidbody2D rb, float runSpeed)
     {
@@ -15,6 +15,6 @@ public class PlayerMovement
     {
         if(dir == Vector2.zero) return;
         
-        rb.MovePosition(rb.position + dir * runSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + runSpeed * Time.deltaTime * dir);
     }
 }
