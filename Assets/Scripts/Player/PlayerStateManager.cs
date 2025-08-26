@@ -15,7 +15,6 @@ public class PlayerStateManager : StateManager<PlayerStates>
     [SerializeField] private Animator animator;
     private KeyboardInput inputHandler;
     private PlayerContext ctx;
-    private bool isMoving;
 
     private void Awake()
     {

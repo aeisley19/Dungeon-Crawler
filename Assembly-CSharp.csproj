@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/State Machine/AbstractState.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerStateManager.cs" />
+    <Compile Include="Assets/Scripts/AnimationEventHandler.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerAttackState.cs" />
@@ -75,9 +76,9 @@
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/PlayerAttacker.cs" />
     <Compile Include="Assets/Scripts/Player/MovementAnimation.cs" />
+    <Compile Include="Assets/Scripts/IAnimationListener.cs" />
     <Compile Include="Assets/Scripts/Player/KeyboardInput.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerWalkState.cs" />
-    <Compile Include="Assets/Scripts/TriggerableState.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerIdleState.cs" />
   </ItemGroup>
   <ItemGroup>

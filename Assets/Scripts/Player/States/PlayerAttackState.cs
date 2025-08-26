@@ -1,13 +1,17 @@
+using System;
 using UnityEngine;
 
-public class PlayerAttackState : AbstractState<PlayerStates>
+public class PlayerAttackState : AbstractState<PlayerStates>, IAnimationListener
 {
+
     private AnimationEventReceiver eventReceiver;
+    private readonly AnimationEventHandler eventHandler;
     private bool isAttacking;
 
     public PlayerAttackState(PlayerContext ctx) : base(PlayerStates.attackState)
     {
         this.ctx = ctx;
+        eventHandler = new AnimationEventHandler(ctx.Animator);
     }
 
     public override void EnterState()
@@ -15,19 +19,19 @@ public class PlayerAttackState : AbstractState<PlayerStates>
         isAttacking = true;
         eventReceiver = ctx.Animator.GetComponent<AnimationEventReceiver>();
         ctx.Animator.SetBool("isAttacking", true);
-        eventReceiver.OnAnimationEnded += HandleAnimationEnd;
+        eventHandler.Subscribe(this);
     }
 
-    public override void UpdateState()
+    //May need to optomize later.
+    public void OnAnimationEvent(String animationEvent)
     {
-        //ctx.Animator.SetBool("isAttacking", true);
+        if (animationEvent == "endattack") isAttacking = false;
     }
-
-    private void HandleAnimationEnd(AnimationEvent animationEvent) => isAttacking = false; 
 
     public override void ExitState()
     {
         ctx.Animator.SetBool("isAttacking", false);
+        eventHandler.UnSubscribe(this);
     }
 
     public override PlayerStates GetNextState()

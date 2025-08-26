@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class AnimationEventReceiver : MonoBehaviour
 {
-    public event Action<AnimationEvent> OnAnimationEnded;
+    public event Action<String> OnAnimationEvent;
 
-    public void OnAnimationEnd(AnimationEvent animationEvent)
+    public void AnimationEvent(String animationEvent)
     {
-        OnAnimationEnded?.Invoke(animationEvent);
+        OnAnimationEvent?.Invoke(animationEvent);
     }
 }
