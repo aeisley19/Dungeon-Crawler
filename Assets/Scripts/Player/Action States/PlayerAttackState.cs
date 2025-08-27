@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-public class PlayerAttackState : AbstractState<PlayerStates>, IAnimationListener
+public class PlayerAttackState : AbstractState<PlayerActionStates>, IAnimationListener
 {
 
     private AnimationEventReceiver eventReceiver;
     private readonly AnimationEventHandler eventHandler;
     private bool isAttacking;
 
-    public PlayerAttackState(PlayerContext ctx) : base(PlayerStates.attackState)
+    public PlayerAttackState(PlayerContext ctx) : base(PlayerActionStates.ATTACKSTATE)
     {
         this.ctx = ctx;
         eventHandler = new AnimationEventHandler(ctx.Animator);
@@ -34,12 +34,12 @@ public class PlayerAttackState : AbstractState<PlayerStates>, IAnimationListener
         eventHandler.UnSubscribe(this);
     }
 
-    public override PlayerStates GetNextState()
+    public override PlayerActionStates GetNextState()
     {
         Debug.Log(isAttacking);
-        if (!isAttacking) return PlayerStates.IdleState;
-        //else if(!isAttacking && ctx.IsMoving) return PlayerStates.WalkState;
+        //if (!isAttacking && ctx.InputHandler.getMovementInput() != Vector2.zero) return PlayerMovementStates.WALKSTATE;
+        //else if(!isAttacking && ctx.InputHandler.getMovementInput() == Vector2.zero) return PlayerMovementStates.WALKSTATE;
 
-        return PlayerStates.attackState;
+        return PlayerActionStates.ATTACKSTATE;
     }
 }

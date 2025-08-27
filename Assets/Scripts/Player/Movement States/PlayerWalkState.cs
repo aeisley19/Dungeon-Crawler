@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class PlayerWalkState : AbstractState<PlayerStates>
+public class PlayerWalkState : AbstractState<PlayerMovementStates>
 {
     private Vector2 input;
     private bool isMoving;
     private readonly PlayerMovement move;
     private readonly MovementAnimation moveAnim;
 
-    public PlayerWalkState(PlayerContext ctx) : base(PlayerStates.WalkState)
+    public PlayerWalkState(PlayerContext ctx) : base(PlayerMovementStates.WALKSTATE)
     {
         this.ctx = ctx;
         move = new PlayerMovement(this.ctx.Rb, this.ctx.RunSpd);
@@ -36,15 +36,13 @@ public class PlayerWalkState : AbstractState<PlayerStates>
         ctx.Animator.SetBool("isMoving", isMoving);
     }
 
-    public override PlayerStates GetNextState()
+    public override PlayerMovementStates GetNextState()
     {
         if (input == Vector2.zero)
         {
-            return PlayerStates.IdleState;
+            return PlayerMovementStates.IDLESTATE;
         }
 
-        if (ctx.InputHandler.AttackInput()) return PlayerStates.attackState;
-
-        return PlayerStates.WalkState;
+        return PlayerMovementStates.WALKSTATE;
     }
 }

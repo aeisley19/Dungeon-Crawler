@@ -65,21 +65,21 @@
     <Analyzer Include="/home/alex/Unity/Hub/Editor/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Animation Events/IAnimationListener.cs" />
+    <Compile Include="Assets/Scripts/Player/Movement States/PlayerIdleState.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractState.cs" />
-    <Compile Include="Assets/Scripts/Player/PlayerStateManager.cs" />
-    <Compile Include="Assets/Scripts/AnimationEventHandler.cs" />
-    <Compile Include="Assets/Scripts/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Animation Events/AnimationEventHandler.cs" />
+    <Compile Include="Assets/Scripts/Player/KeyboardAttackInput.cs" />
+    <Compile Include="Assets/Scripts/Player/Movement States/PlayerWalkState.cs" />
+    <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
     <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
-    <Compile Include="Assets/Scripts/Player/States/PlayerAttackState.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerContext.cs" />
-    <Compile Include="Assets/Scripts/AnimationEventReceiver.cs" />
+    <Compile Include="Assets/Scripts/Player/KeyboardDirectionalInput.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
-    <Compile Include="Assets/Scripts/PlayerAttacker.cs" />
+    <Compile Include="Assets/Scripts/Player/Action States/PlayerAttackState.cs" />
     <Compile Include="Assets/Scripts/Player/MovementAnimation.cs" />
-    <Compile Include="Assets/Scripts/IAnimationListener.cs" />
-    <Compile Include="Assets/Scripts/Player/KeyboardInput.cs" />
-    <Compile Include="Assets/Scripts/Player/States/PlayerWalkState.cs" />
-    <Compile Include="Assets/Scripts/Player/States/PlayerIdleState.cs" />
+    <Compile Include="Assets/Scripts/Player/Movement States/PlayerMovementStateManager.cs" />
+    <Compile Include="Assets/Scripts/Player/Action States/PlayerActionStateManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/1_Pixel Art Top Down - Basic v1.2.1/Changelog.txt" />
