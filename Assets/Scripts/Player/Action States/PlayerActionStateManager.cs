@@ -7,13 +7,22 @@ public enum PlayerActionStates
     INACTIVESTATE,
     ATTACKSTATE
 }
-public class PlayerActionStateManager : StateManager<PlayerActionStates>
+public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerAttackContext>
 {
+    private KeyboardAttackInput inputHandler;
+    [SerializeField] private Animator animator; 
+    private PlayerAttackContext ctx;
+
     public void Awake()
     {
-        states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates>>()
+        inputHandler = new KeyboardAttackInput();
+        ctx = new PlayerAttackContext(inputHandler, animator);
+        states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates, PlayerAttackContext>>()
         {
-            {PlayerActionStates.ATTACKSTATE, new PlayerAttackState(null) }
+            {PlayerActionStates.INACTIVESTATE, new PlayerInactiveState(ctx)},
+            { PlayerActionStates.ATTACKSTATE, new PlayerAttackState(ctx)}
         };
+
+        currentState = states[PlayerActionStates.INACTIVESTATE];
     }
 }

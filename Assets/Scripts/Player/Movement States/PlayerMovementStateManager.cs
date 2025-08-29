@@ -7,25 +7,23 @@ public enum PlayerMovementStates
     WALKSTATE
 }
     
-public class PlayerStateManager : StateManager<PlayerMovementStates>
+public class PlayerMovementStateManager : StateManager<PlayerMovementStates, PlayerMovementContext>
 {
     [SerializeField] private float runSpd;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     private KeyboardDirectionalInput inputHandler;
-    private PlayerContext ctx;
-
+    private PlayerMovementContext ctx;
+    
     private void Awake()
     {
         inputHandler = new KeyboardDirectionalInput();
-        ctx = new PlayerContext(runSpd, rb, animator, inputHandler);
+        ctx = new PlayerMovementContext(runSpd, rb, animator, inputHandler);
 
-        states = new Dictionary<PlayerMovementStates, AbstractState<PlayerMovementStates>>()
+        states = new Dictionary<PlayerMovementStates, AbstractState<PlayerMovementStates, PlayerMovementContext>>()
         {
             {PlayerMovementStates.IDLESTATE, new PlayerIdleState(ctx)},
             {PlayerMovementStates.WALKSTATE, new PlayerWalkState(ctx)}
-            //{PlayerMovementStates.attackState, new PlayerAttackState(ctx)}
-
         };
 
         currentState = states[PlayerMovementStates.IDLESTATE];

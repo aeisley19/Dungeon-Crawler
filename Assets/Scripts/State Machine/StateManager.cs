@@ -3,11 +3,12 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEditor.Rendering.LookDev;
 
-public abstract class StateManager<EState> : MonoBehaviour where EState : Enum
+public abstract class StateManager<EState, TContext> : MonoBehaviour where EState : Enum
 {
-    protected Dictionary<EState, AbstractState<EState>> states;
-    protected AbstractState<EState> currentState;
+    protected Dictionary<EState, AbstractState<EState, TContext>> states;
+    protected AbstractState<EState, TContext> currentState;
     protected bool isTransitioningStates = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

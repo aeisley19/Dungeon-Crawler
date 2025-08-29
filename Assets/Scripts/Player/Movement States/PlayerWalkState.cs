@@ -1,18 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class PlayerWalkState : AbstractState<PlayerMovementStates>
+public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovementContext>
 {
     private Vector2 input;
     private bool isMoving;
     private readonly PlayerMovement move;
     private readonly MovementAnimation moveAnim;
 
-    public PlayerWalkState(PlayerContext ctx) : base(PlayerMovementStates.WALKSTATE)
+    public PlayerWalkState(PlayerMovementContext ctx) : base(PlayerMovementStates.WALKSTATE)
     {
         this.ctx = ctx;
         move = new PlayerMovement(this.ctx.Rb, this.ctx.RunSpd);
-        moveAnim = new MovementAnimation(this.ctx.Animator);
+        moveAnim  = new MovementAnimation(this.ctx.Animator);
     }
 
     public override void EnterState()

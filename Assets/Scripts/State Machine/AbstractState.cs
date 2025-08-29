@@ -2,13 +2,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System;
 
-public abstract class AbstractState<EState> where EState : Enum
+public abstract class AbstractState<EState, TContext> where EState : Enum
 {
-    protected PlayerContext ctx;
+    protected TContext ctx;
 
      public AbstractState(EState state)
     {
-          StateKey = state;
+        StateKey = state;
     }
 
     public EState StateKey { get; private set; }
