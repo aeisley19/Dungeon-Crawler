@@ -16,7 +16,7 @@ public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerA
     public void Awake()
     {
         inputHandler = new KeyboardAttackInput();
-        ctx = new PlayerAttackContext(inputHandler, animator);
+        ctx = new PlayerAttackContext(gameObject, inputHandler, animator);
         states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates, PlayerAttackContext>>()
         {
             {PlayerActionStates.INACTIVESTATE, new PlayerInactiveState(ctx)},

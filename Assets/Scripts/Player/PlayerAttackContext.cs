@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class PlayerAttackContext
+public class PlayerAttackContext : AbstractContext
 {
     public KeyboardAttackInput InputHandler { get; }
     public Animator Animator { get; }
 
-    public PlayerAttackContext(KeyboardAttackInput inputHandler, Animator animator)
+    public PlayerAttackContext(GameObject gameObject, KeyboardAttackInput inputHandler, Animator animator)
     {
         InputHandler = inputHandler;
         Animator = animator;
+        GameObject = gameObject;
     } 
 }

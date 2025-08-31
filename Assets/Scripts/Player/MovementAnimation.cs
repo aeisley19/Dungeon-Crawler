@@ -8,7 +8,7 @@ public class MovementAnimation
 
     public void SetMovementDirection(Vector2 moveDir)
     {
-        animator.SetFloat("moveX", moveDir.x);
-        animator.SetFloat("moveY", moveDir.y);
+        if(animator.GetFloat("moveY") == 0) animator.SetFloat("moveX", moveDir.x);
+        if(animator.GetFloat("moveX") == 0) animator.SetFloat("moveY", moveDir.y);
     }
 }

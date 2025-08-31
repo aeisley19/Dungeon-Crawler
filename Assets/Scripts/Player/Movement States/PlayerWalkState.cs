@@ -5,6 +5,7 @@ public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovemen
 {
     private Vector2 input;
     private bool isMoving;
+    private RotateHitBox rotateHitBox;
     private readonly PlayerMovement move;
     private readonly MovementAnimation moveAnim;
 
@@ -12,22 +13,24 @@ public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovemen
     {
         this.ctx = ctx;
         move = new PlayerMovement(this.ctx.Rb, this.ctx.RunSpd);
-        moveAnim  = new MovementAnimation(this.ctx.Animator);
+        moveAnim = new MovementAnimation(this.ctx.Animator);
     }
 
     public override void EnterState()
     {
-        input = ctx.InputHandler.getMovementInput();
+        input = ctx.InputHandler.GetMovementInput();
+        rotateHitBox = ctx.GameObject.transform.Find("HitBoxOrigin").GetComponent<RotateHitBox>();
         isMoving = true;
         ctx.Animator.SetBool("isMoving", isMoving);
-
     }
 
     public override void UpdateState()
     {
         move.Move(input);
         moveAnim.SetMovementDirection(input);
-        input = ctx.InputHandler.getMovementInput();
+        input = ctx.InputHandler.GetMovementInput();
+        Debug.Log(ctx.GameObject.name);
+        rotateHitBox.Rotate(new Vector2(ctx.Animator.GetFloat("moveX"), ctx.Animator.GetFloat("moveY")));
     }
 
     public override void ExitState()

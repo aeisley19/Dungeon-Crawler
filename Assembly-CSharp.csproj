@@ -76,11 +76,14 @@
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
     <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
     <Compile Include="Assets/Scripts/Player/KeyboardDirectionalInput.cs" />
+    <Compile Include="Assets/Scripts/Player/RotateHitBox.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player/Action States/PlayerAttackState.cs" />
     <Compile Include="Assets/Scripts/Player/MovementAnimation.cs" />
     <Compile Include="Assets/Scripts/Player/Movement States/PlayerMovementStateManager.cs" />
+    <Compile Include="Assets/Scripts/Player/Action States/PlayerAttackHandler.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovementContext.cs" />
+    <Compile Include="Assets/Scripts/AbstractContext.cs" />
     <Compile Include="Assets/Scripts/Player/Action States/PlayerActionStateManager.cs" />
   </ItemGroup>
   <ItemGroup>

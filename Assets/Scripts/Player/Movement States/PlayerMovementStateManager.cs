@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum PlayerMovementStates
@@ -18,7 +19,7 @@ public class PlayerMovementStateManager : StateManager<PlayerMovementStates, Pla
     private void Awake()
     {
         inputHandler = new KeyboardDirectionalInput();
-        ctx = new PlayerMovementContext(runSpd, rb, animator, inputHandler);
+        ctx = new PlayerMovementContext(gameObject,  animator, runSpd, rb, inputHandler);
 
         states = new Dictionary<PlayerMovementStates, AbstractState<PlayerMovementStates, PlayerMovementContext>>()
         {

@@ -17,7 +17,16 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
         isAttacking = true;
         ctx.Animator.SetBool("isAttacking", true);
         eventHandler.Subscribe(this);
+        Debug.Log(ctx.Animator.GetFloat("moveX") * Vector2.left + ctx.Animator.GetFloat("moveY") * Vector2.down);
+        
     }
+
+    public override void UpdateState()
+    {
+
+    }
+        
+    
 
     //May need to optomize later.
     public void OnAnimationEvent(String animationEvent)
@@ -33,7 +42,6 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
 
     public override PlayerActionStates GetNextState()
     {
-        Debug.Log(isAttacking);
         if (!isAttacking) return PlayerActionStates.INACTIVESTATE;
 
         return PlayerActionStates.ATTACKSTATE;

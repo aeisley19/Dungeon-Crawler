@@ -6,7 +6,6 @@ public class PlayerInactiveState : AbstractState<PlayerActionStates, PlayerAttac
 
     public override PlayerActionStates GetNextState()
     {
-        Debug.Log(ctx.InputHandler.AttackInput());
         if (ctx.InputHandler.AttackInput()) return PlayerActionStates.ATTACKSTATE;
 
         return PlayerActionStates.INACTIVESTATE;

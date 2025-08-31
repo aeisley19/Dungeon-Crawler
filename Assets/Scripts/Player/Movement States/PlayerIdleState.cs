@@ -11,7 +11,7 @@ public class PlayerIdleState : AbstractState<PlayerMovementStates, PlayerMovemen
     }
     public override PlayerMovementStates GetNextState()
     {
-        if (ctx.InputHandler.getMovementInput() != Vector2.zero) return PlayerMovementStates.WALKSTATE;
+        if (ctx.InputHandler.GetMovementInput() != Vector2.zero) return PlayerMovementStates.WALKSTATE;
 
         return PlayerMovementStates.IDLESTATE;
     }
