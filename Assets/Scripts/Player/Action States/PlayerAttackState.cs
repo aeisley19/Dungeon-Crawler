@@ -9,21 +9,21 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
     public PlayerAttackState(PlayerAttackContext ctx) : base(PlayerActionStates.ATTACKSTATE)
     {
         this.ctx = ctx;
-        eventHandler = new AnimationEventHandler(ctx.Animator);
+        eventHandler = new AnimationEventHandler(ctx.SharedCtx.Animator);
     }
 
     public override void EnterState()
     {
         isAttacking = true;
-        ctx.Animator.SetBool("isAttacking", true);
+        ctx.SharedCtx.Animator.SetBool("isAttacking", true);
         eventHandler.Subscribe(this);
-        Debug.Log(ctx.Animator.GetFloat("moveX") * Vector2.left + ctx.Animator.GetFloat("moveY") * Vector2.down);
-        
+        Debug.Log(ctx.SharedCtx.Animator.GetFloat("moveX") * Vector2.left + ctx.SharedCtx.Animator.GetFloat("moveY") * Vector2.down);
     }
 
     public override void UpdateState()
     {
-
+        Debug.Log("attack " + ctx.SharedCtx.FacingDir);
+        Debug.DrawLine(ctx.GameObject.transform.position, ctx.GameObject.transform.position + ctx.SharedCtx.FacingDir, Color.red, 10f);
     }
         
     
@@ -36,7 +36,7 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
 
     public override void ExitState()
     {
-        ctx.Animator.SetBool("isAttacking", false);
+        ctx.SharedCtx.Animator.SetBool("isAttacking", false);
         eventHandler.UnSubscribe(this);
     }
 

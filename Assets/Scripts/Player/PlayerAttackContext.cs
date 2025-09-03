@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlayerAttackContext : AbstractContext
 {
     public KeyboardAttackInput InputHandler { get; }
-    public Animator Animator { get; }
+    public SharedPlayerContext SharedCtx{ get; }
 
-    public PlayerAttackContext(GameObject gameObject, KeyboardAttackInput inputHandler, Animator animator)
+    public PlayerAttackContext(GameObject gameObject, SharedPlayerContext sharedCtx, KeyboardAttackInput inputHandler)
     {
         InputHandler = inputHandler;
-        Animator = animator;
         GameObject = gameObject;
+        SharedCtx = sharedCtx;
     } 
 }

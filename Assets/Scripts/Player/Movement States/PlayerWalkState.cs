@@ -6,6 +6,7 @@ public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovemen
     private Vector2 input;
     private bool isMoving;
     private RotateHitBox rotateHitBox;
+    private Transform hitBoxOrigin;
     private readonly PlayerMovement move;
     private readonly MovementAnimation moveAnim;
 
@@ -13,30 +14,32 @@ public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovemen
     {
         this.ctx = ctx;
         move = new PlayerMovement(this.ctx.Rb, this.ctx.RunSpd);
-        moveAnim = new MovementAnimation(this.ctx.Animator);
+        moveAnim = new MovementAnimation(this.ctx.SharedCtx.Animator);
     }
 
     public override void EnterState()
     {
         input = ctx.InputHandler.GetMovementInput();
-        rotateHitBox = ctx.GameObject.transform.Find("HitBoxOrigin").GetComponent<RotateHitBox>();
+        hitBoxOrigin = ctx.GameObject.transform.Find("HitBoxOrigin");
+        rotateHitBox = hitBoxOrigin.GetComponent<RotateHitBox>();
         isMoving = true;
-        ctx.Animator.SetBool("isMoving", isMoving);
+        ctx.SharedCtx.Animator.SetBool("isMoving", isMoving);
     }
-
     public override void UpdateState()
     {
         move.Move(input);
         moveAnim.SetMovementDirection(input);
         input = ctx.InputHandler.GetMovementInput();
-        Debug.Log(ctx.GameObject.name);
-        rotateHitBox.Rotate(new Vector2(ctx.Animator.GetFloat("moveX"), ctx.Animator.GetFloat("moveY")));
+        ctx.SharedCtx.SetFacingDir(new Vector2(ctx.SharedCtx.Animator.GetFloat("moveX"), ctx.SharedCtx.Animator.GetFloat("moveY")));
+        Debug.Log(ctx.SharedCtx.FacingDir);
+        rotateHitBox.Rotate(new Vector2(ctx.SharedCtx.Animator.GetFloat("moveX"), ctx.SharedCtx.Animator.GetFloat("moveY")));
+         //Debug.DrawLine(ctx.GameObject.transform.position, ctx.GameObject.transform.position + ctx.SharedCtx.FacingDir, Color.red, 10f);
     }
 
     public override void ExitState()
     {
         isMoving = false;
-        ctx.Animator.SetBool("isMoving", isMoving);
+        ctx.SharedCtx.Animator.SetBool("isMoving", isMoving);
     }
 
     public override PlayerMovementStates GetNextState()

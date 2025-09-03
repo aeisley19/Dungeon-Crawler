@@ -73,9 +73,11 @@
     <Compile Include="Assets/Scripts/Player/KeyboardAttackInput.cs" />
     <Compile Include="Assets/Scripts/Player/Movement States/PlayerWalkState.cs" />
     <Compile Include="Assets/Scripts/Player/Action States/PlayerInactiveState.cs" />
+    <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
     <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
     <Compile Include="Assets/Scripts/Player/KeyboardDirectionalInput.cs" />
+    <Compile Include="Assets/Scripts/SharedPlayerContext.cs" />
     <Compile Include="Assets/Scripts/Player/RotateHitBox.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player/Action States/PlayerAttackState.cs" />

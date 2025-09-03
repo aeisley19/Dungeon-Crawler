@@ -7,16 +7,19 @@ public enum PlayerActionStates
     INACTIVESTATE,
     ATTACKSTATE
 }
+
+[RequireComponent(typeof(PlayerController))]
 public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerAttackContext>
 {
     private KeyboardAttackInput inputHandler;
-    [SerializeField] private Animator animator; 
+    private SharedPlayerContext sharedCtx;
     private PlayerAttackContext ctx;
 
     public void Awake()
     {
         inputHandler = new KeyboardAttackInput();
-        ctx = new PlayerAttackContext(gameObject, inputHandler, animator);
+        sharedCtx = GetComponent<PlayerController>().SharedCtx;
+        ctx = new PlayerAttackContext(gameObject, sharedCtx, inputHandler);
         states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates, PlayerAttackContext>>()
         {
             {PlayerActionStates.INACTIVESTATE, new PlayerInactiveState(ctx)},

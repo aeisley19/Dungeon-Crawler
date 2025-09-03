@@ -7,7 +7,8 @@ public class PlayerIdleState : AbstractState<PlayerMovementStates, PlayerMovemen
 
     public override void EnterState()
     {
-        ctx.Animator.SetBool("isMoving", false);
+        ctx.SharedCtx.Animator.SetBool("isMoving", false);
+        Debug.Log("idle " + ctx.SharedCtx.FacingDir);
     }
     public override PlayerMovementStates GetNextState()
     {
