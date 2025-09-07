@@ -31,9 +31,7 @@ public class PlayerWalkState : AbstractState<PlayerMovementStates, PlayerMovemen
         moveAnim.SetMovementDirection(input);
         input = ctx.InputHandler.GetMovementInput();
         ctx.SharedCtx.SetFacingDir(new Vector2(ctx.SharedCtx.Animator.GetFloat("moveX"), ctx.SharedCtx.Animator.GetFloat("moveY")));
-        Debug.Log(ctx.SharedCtx.FacingDir);
         rotateHitBox.Rotate(new Vector2(ctx.SharedCtx.Animator.GetFloat("moveX"), ctx.SharedCtx.Animator.GetFloat("moveY")));
-         //Debug.DrawLine(ctx.GameObject.transform.position, ctx.GameObject.transform.position + ctx.SharedCtx.FacingDir, Color.red, 10f);
     }
 
     public override void ExitState()

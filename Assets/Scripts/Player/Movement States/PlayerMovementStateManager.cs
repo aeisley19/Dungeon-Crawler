@@ -16,7 +16,6 @@ public class PlayerMovementStateManager : StateManager<PlayerMovementStates, Pla
     private KeyboardDirectionalInput inputHandler;
     private SharedPlayerContext sharedCtx;
     private PlayerMovementContext ctx;
-    private Vector2 facingDir;
 
     private void Awake()
     {

@@ -14,7 +14,8 @@ public class PlayerMovement
     public void Move(Vector2 dir)
     {
         if(dir == Vector2.zero) return;
-        
+
+        dir.Normalize();
         rb.MovePosition(rb.position + runSpeed * Time.deltaTime * dir);
     }
 }

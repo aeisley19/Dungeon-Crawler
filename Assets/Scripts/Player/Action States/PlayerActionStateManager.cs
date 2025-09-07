@@ -12,14 +12,16 @@ public enum PlayerActionStates
 public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerAttackContext>
 {
     private KeyboardAttackInput inputHandler;
+    private ActionCooldown cooldown;
     private SharedPlayerContext sharedCtx;
     private PlayerAttackContext ctx;
 
     public void Awake()
     {
         inputHandler = new KeyboardAttackInput();
+        cooldown = gameObject.AddComponent<ActionCooldown>();
         sharedCtx = GetComponent<PlayerController>().SharedCtx;
-        ctx = new PlayerAttackContext(gameObject, sharedCtx, inputHandler);
+        ctx = new PlayerAttackContext(gameObject, sharedCtx, inputHandler, cooldown);
         states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates, PlayerAttackContext>>()
         {
             {PlayerActionStates.INACTIVESTATE, new PlayerInactiveState(ctx)},

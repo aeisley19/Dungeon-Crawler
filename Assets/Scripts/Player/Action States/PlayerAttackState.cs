@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackContext>, IAnimationListener
@@ -17,19 +19,15 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
         isAttacking = true;
         ctx.SharedCtx.Animator.SetBool("isAttacking", true);
         eventHandler.Subscribe(this);
-        Debug.Log(ctx.SharedCtx.Animator.GetFloat("moveX") * Vector2.left + ctx.SharedCtx.Animator.GetFloat("moveY") * Vector2.down);
     }
 
     public override void UpdateState()
     {
-        Debug.Log("attack " + ctx.SharedCtx.FacingDir);
-        Debug.DrawLine(ctx.GameObject.transform.position, ctx.GameObject.transform.position + ctx.SharedCtx.FacingDir, Color.red, 10f);
+        Debug.Log("attacking");
     }
-        
-    
 
     //May need to optomize later.
-    public void OnAnimationEvent(String animationEvent)
+    public void OnAnimationEvent(string animationEvent)
     {
         if (animationEvent == "endattack") isAttacking = false;
     }
@@ -38,6 +36,7 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
     {
         ctx.SharedCtx.Animator.SetBool("isAttacking", false);
         eventHandler.UnSubscribe(this);
+        ctx.Cooldown.InitiateCooldown(0.25f);
     }
 
     public override PlayerActionStates GetNextState()

@@ -1,17 +1,11 @@
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class PlayerAttackHandler : MonoBehaviour
 {
 
-    public PlayerAttackHandler()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.tag ==  "Enemy") print("hit");
     }
 
-    public Collider2D Attack(Animator animator)
-    {
-        return Physics2D.OverlapCircle(gameObject.transform.position, 1);
-    }
-
- }
+}

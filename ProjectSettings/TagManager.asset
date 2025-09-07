@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - Ground
   - Foreground
-  - 
+  - Hitable
   - 
   - 
   - 
@@ -47,11 +48,11 @@ TagManager:
   - name: Foreground
     uniqueID: 1850707271
     locked: 0
-  - name: Player
-    uniqueID: 2170360201
-    locked: 0
   - name: Obstacle
     uniqueID: 2156420249
+    locked: 0
+  - name: Player
+    uniqueID: 2170360201
     locked: 0
   m_RenderingLayers:
   - Default
