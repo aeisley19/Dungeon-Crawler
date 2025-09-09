@@ -21,11 +21,6 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
         eventHandler.Subscribe(this);
     }
 
-    public override void UpdateState()
-    {
-        Debug.Log("attacking");
-    }
-
     //May need to optomize later.
     public void OnAnimationEvent(string animationEvent)
     {

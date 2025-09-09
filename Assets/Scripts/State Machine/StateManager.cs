@@ -26,6 +26,14 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
         else if (!isTransitioningStates) TransitionToState(nextStateKey);
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (currentState is ICollidable collidableState)
+        {
+            collidableState.OnTrigger(col);
+        }
+    }
+
     public void TransitionToState(EState stateKey)
     {
         isTransitioningStates = true;

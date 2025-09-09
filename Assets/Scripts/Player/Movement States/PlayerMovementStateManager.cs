@@ -17,7 +17,7 @@ public class PlayerMovementStateManager : StateManager<PlayerMovementStates, Pla
     private SharedPlayerContext sharedCtx;
     private PlayerMovementContext ctx;
 
-    private void Awake()
+    private void Start()
     {
         inputHandler = new KeyboardDirectionalInput();
         sharedCtx = GetComponent<PlayerController>().SharedCtx;

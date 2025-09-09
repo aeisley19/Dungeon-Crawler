@@ -16,7 +16,7 @@ public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerA
     private SharedPlayerContext sharedCtx;
     private PlayerAttackContext ctx;
 
-    public void Awake()
+    public void Start()
     {
         inputHandler = new KeyboardAttackInput();
         cooldown = gameObject.AddComponent<ActionCooldown>();
@@ -25,7 +25,7 @@ public class PlayerActionStateManager : StateManager<PlayerActionStates, PlayerA
         states = new Dictionary<PlayerActionStates, AbstractState<PlayerActionStates, PlayerAttackContext>>()
         {
             {PlayerActionStates.INACTIVESTATE, new PlayerInactiveState(ctx)},
-            { PlayerActionStates.ATTACKSTATE, new PlayerAttackState(ctx)}
+            {PlayerActionStates.ATTACKSTATE, new PlayerAttackState(ctx)}
         };
 
         currentState = states[PlayerActionStates.INACTIVESTATE];

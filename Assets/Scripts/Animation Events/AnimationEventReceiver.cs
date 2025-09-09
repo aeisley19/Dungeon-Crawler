@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class AnimationEventReceiver : MonoBehaviour
 {
-    public event Action<String> OnAnimationEvent;
+    public event Action<string> OnAnimationEvent;
 
-    public void AnimationEvent(String animationEvent)
+    public void AnimationEvent(string animationEvent)
     {
         OnAnimationEvent?.Invoke(animationEvent);
     }
