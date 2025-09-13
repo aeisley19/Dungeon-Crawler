@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
 
-public class PlayerIdleState : AbstractState<PlayerMovementStates, PlayerMovementContext>
+public class PlayerIdleState : AbstractState<PlayerStates, PlayerContext>
 {
-    public PlayerIdleState(PlayerMovementContext ctx) : base(PlayerMovementStates.IDLESTATE) => this.ctx = ctx;
-    public override PlayerMovementStates GetNextState()
+    public PlayerIdleState(PlayerContext ctx) : base(PlayerStates.IDLESTATE) => this.ctx = ctx;
+    public override PlayerStates GetNextState()
     {
-        Debug.Log(ctx.InputHandler.GetMovementInput());
-        if (ctx.InputHandler.GetMovementInput() != Vector2.zero) return PlayerMovementStates.WALKSTATE;
+        if (ctx.InputHandler.GetAttackInput()) return PlayerStates.ATTACKSTATE;
+        if (ctx.InputHandler.GetMovementInput() != Vector2.zero) return PlayerStates.WALKSTATE;
 
-        return PlayerMovementStates.IDLESTATE;
+        return PlayerStates.IDLESTATE;
     }
 }

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackContext>, IAnimationListener
+public class PlayerAttackState : AbstractState<PlayerStates, PlayerContext>, IAnimationListener
 {
     private readonly AnimationEventHandler eventHandler;
     private bool isAttacking;
 
-    public PlayerAttackState(PlayerAttackContext ctx) : base(PlayerActionStates.ATTACKSTATE)
+    public PlayerAttackState(PlayerContext ctx) : base(PlayerStates.ATTACKSTATE)
     {
         this.ctx = ctx;
-        eventHandler = new AnimationEventHandler(ctx.SharedCtx.Animator);
+        eventHandler = new AnimationEventHandler(ctx.Animator);
     }
 
     public override void EnterState()
     {
         isAttacking = true;
-        ctx.SharedCtx.Animator.SetBool("isAttacking", true);
+        ctx.Animator.SetBool("isAttacking", true);
         eventHandler.Subscribe(this);
     }
 
@@ -29,15 +29,14 @@ public class PlayerAttackState : AbstractState<PlayerActionStates, PlayerAttackC
 
     public override void ExitState()
     {
-        ctx.SharedCtx.Animator.SetBool("isAttacking", false);
+        ctx.Animator.SetBool("isAttacking", false);
         eventHandler.UnSubscribe(this);
-        ctx.Cooldown.InitiateCooldown(0.25f);
     }
 
-    public override PlayerActionStates GetNextState()
+    public override PlayerStates GetNextState()
     {
-        if (!isAttacking) return PlayerActionStates.INACTIVESTATE;
+        if (!isAttacking) return PlayerStates.IDLESTATE;
 
-        return PlayerActionStates.ATTACKSTATE;
+        return PlayerStates.ATTACKSTATE;
     }
 }

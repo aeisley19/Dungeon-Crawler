@@ -22,6 +22,8 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
     {
         EState nextStateKey = currentState.GetNextState();
 
+        Debug.Log(currentState);
+
         if (nextStateKey.Equals(currentState.StateKey)) currentState.UpdateState();
         else if (!isTransitioningStates) TransitionToState(nextStateKey);
     }
