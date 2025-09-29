@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,10 +131,10 @@ TextureImporter:
       name: char_death_all_dir_anim_strip_10_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 11
-        height: 14
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: char_death_all_dir_anim_strip_10_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 2
-        width: 12
-        height: 14
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,9 +176,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 3
-        width: 13
-        height: 13
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 6
-        width: 13
-        height: 10
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: char_death_all_dir_anim_strip_10_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 7
-        width: 10
-        height: 9
+        x: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: char_death_all_dir_anim_strip_10_5
       rect:
         serializedVersion: 2
-        x: 84
-        y: 7
-        width: 72
-        height: 9
+        x: 80
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,11 +259,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: char_death_all_dir_anim_strip_10_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695cdf5bb113e4376bcdacc2e40c1df4
+      internalID: 912363845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_death_all_dir_anim_strip_10_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d6b541e204f9617a50ecc60cb6cdda
+      internalID: -1903207378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_death_all_dir_anim_strip_10_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa922263a8305e83b7ffa29d0c036cd
+      internalID: -1737080364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_death_all_dir_anim_strip_10_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20b0eaa5f01a75a68b77884fb5104c8
+      internalID: -877205194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7da78e217361f71039ed0daa3bd1b245
     internalID: 0
     vertices: []
     indices: 
@@ -279,6 +367,10 @@ TextureImporter:
       char_death_all_dir_anim_strip_10_3: 8518965875861273073
       char_death_all_dir_anim_strip_10_4: 385221139428804270
       char_death_all_dir_anim_strip_10_5: -6029054704226325176
+      char_death_all_dir_anim_strip_10_6: 912363845
+      char_death_all_dir_anim_strip_10_7: -1903207378
+      char_death_all_dir_anim_strip_10_8: -1737080364
+      char_death_all_dir_anim_strip_10_9: -877205194
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

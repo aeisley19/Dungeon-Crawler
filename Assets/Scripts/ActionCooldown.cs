@@ -3,13 +3,10 @@ using UnityEngine;
 
 public class ActionCooldown : MonoBehaviour
 {
-    private float coolDownTimer = 0;
     private bool isActionable = true;
 
     public void InitiateCooldown(float cooldownTimer)
     {
-        this.coolDownTimer = cooldownTimer;
-
         isActionable = false;
         StartCoroutine(CoolDown(cooldownTimer));
     }

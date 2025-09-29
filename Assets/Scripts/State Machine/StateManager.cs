@@ -18,7 +18,7 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         EState nextStateKey = currentState.GetNextState();
 
