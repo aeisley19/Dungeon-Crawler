@@ -14,7 +14,6 @@ public class DamageHandler : MonoBehaviour
         {
             IsDamaged = true;
             Other = other;
-            print("time " + IsDamaged);
         }
     }
 

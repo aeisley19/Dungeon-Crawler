@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 public class KnockbackHandler
 {
-    private readonly float knockBackForce = 5;
+    private readonly float knockBackForce = 10;
     private readonly Rigidbody2D rb;
 
     public KnockbackHandler(Rigidbody2D rb)

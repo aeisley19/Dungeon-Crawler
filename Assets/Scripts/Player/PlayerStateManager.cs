@@ -7,7 +7,8 @@ public enum PlayerStates
     IDLESTATE,
     WALKSTATE,
     ATTACKSTATE,
-    DAMAGEDSTATE
+    DAMAGEDSTATE,
+    DEATHSTATE
 }
 public class PlayerStateManager : StateManager<PlayerStates, PlayerContext>
 {
@@ -17,20 +18,22 @@ public class PlayerStateManager : StateManager<PlayerStates, PlayerContext>
     [SerializeField] private Animator animator;
     [SerializeField] private HealthManager health;
     [SerializeField] private DamageHandler damageHandler;
+    [SerializeField] private HealthUI ui;
     private KeyboardInput inputHandler;
     private PlayerContext ctx;
 
     private void Start()
     {
         inputHandler = new KeyboardInput();
-        ctx = new PlayerContext(gameObject, animator, runSpd, rb, col, inputHandler, health, damageHandler);
+        ctx = new PlayerContext(gameObject, animator, runSpd, rb, col, inputHandler, health, damageHandler, ui);
 
         states = new Dictionary<PlayerStates, AbstractState<PlayerStates, PlayerContext>>()
          {
              {PlayerStates.IDLESTATE, new PlayerIdleState(ctx)},
              {PlayerStates.WALKSTATE, new PlayerWalkState(ctx)},
              {PlayerStates.ATTACKSTATE, new PlayerAttackState(ctx)},
-             {PlayerStates.DAMAGEDSTATE, new PlayerDamagedState(ctx)}
+             {PlayerStates.DAMAGEDSTATE, new PlayerDamagedState(ctx)},
+             {PlayerStates.DEATHSTATE, new PlayerDeathState(ctx)}
          };
 
         currentState = states[PlayerStates.IDLESTATE];

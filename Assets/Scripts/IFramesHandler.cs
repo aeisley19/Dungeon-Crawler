@@ -13,6 +13,7 @@ public class IFramesHandler
 
     public IEnumerator InitializeIFrames()
     {
+        Debug.Log("iframes");
         col.enabled = false;
         yield return new WaitForSeconds(iframesTimer);
         col.enabled = true;

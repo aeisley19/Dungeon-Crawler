@@ -22,6 +22,8 @@ public class PlayerDamagedState : AbstractState<PlayerStates, PlayerContext>, IA
         ctx.Animator.SetBool("isDamaged", ctx.DamageHandler.IsDamaged);
         knockback.Knockback(ctx.DamageHandler.Other);
         CoroutineCaller.Instance.Run(iFrames.InitializeIFrames());
+        ctx.Health.LoseHealth(0.5f); //Change later. You need dynamic damage.
+        ctx.UI.DamageUI(0.5f);
     }
 
     public override void ExitState()
@@ -29,6 +31,7 @@ public class PlayerDamagedState : AbstractState<PlayerStates, PlayerContext>, IA
         eventHandler.UnSubscribe(this);
         ctx.Animator.SetBool("isDamaged", ctx.DamageHandler.IsDamaged);
         ctx.Rb.linearVelocity = Vector2.zero;
+        
     }
 
     public void OnAnimationEvent(string animationEvent)
@@ -38,6 +41,7 @@ public class PlayerDamagedState : AbstractState<PlayerStates, PlayerContext>, IA
 
     public override PlayerStates GetNextState()
     {
+       // if (ctx.Health.Hearts <= 0) return PlayerStates.DEATHSTATE;
         if (!ctx.DamageHandler.IsDamaged) return PlayerStates.IDLESTATE;
 
         return PlayerStates.DAMAGEDSTATE;

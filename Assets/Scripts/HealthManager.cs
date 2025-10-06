@@ -2,17 +2,31 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField] private float hearts;
+    [SerializeField] private int maxHearts;
+    private float hearts;
 
-    public float Hearts { get; }
-
-    public virtual void ReplenishHealth(float healAmount)
+    public void Awake()
     {
-        hearts += healAmount;
+        hearts = maxHearts;
+    }
+
+    public float Hearts { get { return hearts; } }
+    public int MaxHearts { get { return maxHearts; } }
+
+    public virtual void ReplenishHealth(int healAmount)
+    {
+        if (healAmount + hearts <= maxHearts) hearts += healAmount;
+        else hearts = maxHearts;
     }
 
     public void LoseHealth(float damageAmount)
     {
-        hearts -= damageAmount;
+        if (damageAmount >= hearts) hearts = 0;
+        else hearts -= damageAmount;
+    }
+
+    public void IncrementMaxHealth()
+    {
+        maxHearts++;
     }
 }
