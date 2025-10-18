@@ -1,26 +1,33 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public enum EnemyStates
+/*public enum EnemyStates
 {
     IDLESTATE,
+    PURSUINGSTATE,
     DAMAGEDSTATE
-}
-
-
-public class EnemyStateManager : StateManager<EnemyStates, EnemyContext>
+}*/
+/*
+public abstract class EnemyStateManager<EStates, TContext> : StateManager<EnemyStates, EnemyContext> where EStates : Enum
 {
-
     private EnemyContext ctx;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created.
     void Start()
     {
         ctx = new EnemyContext();
 
-        states = new Dictionary<EnemyStates, AbstractState<EnemyStates, EnemyContext>>()
-        {
-            //{EnemyStates.IDLESTATE, new EnemyIdleState(ctx)}
-        };
+        //states = new Dictionary<EStates, AbstractState<EStates, TContext>>();
     }
-}
+
+    protected void AddState(AbstractState<EnemyStates, EnemyContext> state)
+    {
+        states[state.StateKey] = state;
+    }
+
+    protected void RegisterSharedClasses()
+    {
+        AddState(new EnemyIdleState(ctx));
+    }
+}*/

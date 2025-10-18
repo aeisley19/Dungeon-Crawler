@@ -1,6 +1,6 @@
-using UnityEngine;
+/*using UnityEngine;
 
-public abstract class EnemyIdleState : AbstractState<EnemyStates, EnemyContext>
+public class EnemyIdleState : AbstractState<EnemyStates, EnemyContext>
 {
     public EnemyIdleState(EnemyContext ctx) : base(EnemyStates.IDLESTATE)
     {
@@ -12,3 +12,4 @@ public abstract class EnemyIdleState : AbstractState<EnemyStates, EnemyContext>
         throw new System.NotImplementedException();
     }
 }
+*/

@@ -3366,7 +3366,7 @@ MonoBehaviour:
   animator: {fileID: 828085010}
   health: {fileID: 828085026}
   damageHandler: {fileID: 42417533}
-  ui: {fileID: 194861210}
+  ui: {fileID: 194861212}
 --- !u!114 &828085026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3923,8 +3923,12 @@ GameObject:
   - component: {fileID: 1619431472}
   - component: {fileID: 1619431471}
   - component: {fileID: 1619431473}
-  - component: {fileID: 1619431474}
   - component: {fileID: 1619431475}
+  - component: {fileID: 1619431474}
+  - component: {fileID: 1619431477}
+  - component: {fileID: 1619431476}
+  - component: {fileID: 1619431478}
+  - component: {fileID: 1619431479}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -4087,6 +4091,62 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1619431476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cd25dc43ec9d7509847fde8788f13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 1619431474}
+  collisionTag: Damageable
+--- !u!114 &1619431477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a5a729cb0752ae8a57dbcb3dad4a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageHandler: {fileID: 1619431476}
+  animator: {fileID: 1619431473}
+  rb: {fileID: 1619431475}
+  col: {fileID: 1619431474}
+  health: {fileID: 1619431478}
+--- !u!114 &1619431478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be341cbb7c5647b7f95985d1af55a681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHearts: 3
+--- !u!114 &1619431479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611f83db891a8bb369453ec94ba89600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1913957962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,7 +4161,7 @@ GameObject:
   - component: {fileID: 1913957966}
   m_Layer: 0
   m_Name: HitBoxOrigin
-  m_TagString: Untagged
+  m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

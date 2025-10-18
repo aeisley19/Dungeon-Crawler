@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using System;
-using UnityEditor.Rendering.LookDev;
 
 public abstract class StateManager<EState, TContext> : MonoBehaviour where EState : Enum
 {
@@ -20,9 +17,8 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
     // Update is called once per frame
     void FixedUpdate()
     {
+        print(currentState);
         EState nextStateKey = currentState.GetNextState();
-
-        Debug.Log(currentState);
 
         if (nextStateKey.Equals(currentState.StateKey)) currentState.UpdateState();
         else if (!isTransitioningStates) TransitionToState(nextStateKey);
