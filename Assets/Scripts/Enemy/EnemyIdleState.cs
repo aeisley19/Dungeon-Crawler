@@ -11,5 +11,4 @@ public class EnemyIdleState : AbstractState<EnemyStates, EnemyContext>
     {
         throw new System.NotImplementedException();
     }
-}
-*/
+}*/

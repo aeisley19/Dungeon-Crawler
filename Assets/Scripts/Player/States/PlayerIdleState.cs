@@ -4,6 +4,7 @@ using UnityEngine.InputSystem.Interactions;
 public class PlayerIdleState : AbstractState<PlayerStates, PlayerContext>
 {
     public PlayerIdleState(PlayerContext ctx) : base(PlayerStates.IDLESTATE) => this.ctx = ctx;
+
     public override PlayerStates GetNextState()
     {
         if (ctx.DamageHandler.IsDamaged) return PlayerStates.DAMAGEDSTATE;

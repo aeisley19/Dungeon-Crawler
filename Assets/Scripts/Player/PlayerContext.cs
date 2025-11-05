@@ -7,16 +7,11 @@ public class PlayerContext : SharedAliveObjectsContext
     public float RunSpd { get; }
 
     public PlayerContext(GameObject gameObject, Animator animator, float runSpd, Rigidbody2D rb, Collider2D col,
-        KeyboardInput inputHandler, HealthManager health, DamageHandler damageHandler, HealthUI ui)
+        KeyboardInput inputHandler, HealthManager health, DamageHandler damageHandler, HealthUI ui) 
+        : base(gameObject, rb, col, health, damageHandler, animator)
     {
-        Animator = animator;
         RunSpd = runSpd;
-        Rb = rb;
         InputHandler = inputHandler;
-        GameObject = gameObject;
-        Health = health;
-        DamageHandler = damageHandler;
-        Col = col;
         UI = ui;
     }
 }

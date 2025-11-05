@@ -9,9 +9,10 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
     protected bool isTransitioningStates = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
-        currentState.EnterState();
+        Debug.Log("fuckyou " + currentState);
+        currentState?.EnterState();
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
 
     public void TransitionToState(EState stateKey)
     {
+        Debug.Log("fuckme " + currentState);
         isTransitioningStates = true;
         currentState.ExitState();
         currentState = states[stateKey];

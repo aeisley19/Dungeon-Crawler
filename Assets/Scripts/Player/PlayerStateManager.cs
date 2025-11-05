@@ -22,7 +22,7 @@ public class PlayerStateManager : StateManager<PlayerStates, PlayerContext>
     private KeyboardInput inputHandler;
     private PlayerContext ctx;
 
-    private void Start()
+    protected override void Start()
     {
         inputHandler = new KeyboardInput();
         ctx = new PlayerContext(gameObject, animator, runSpd, rb, col, inputHandler, health, damageHandler, ui);
@@ -37,5 +37,7 @@ public class PlayerStateManager : StateManager<PlayerStates, PlayerContext>
          };
 
         currentState = states[PlayerStates.IDLESTATE];
+
+        base.Start();
     }
 }

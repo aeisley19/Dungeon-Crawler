@@ -1,18 +1,33 @@
 using UnityEngine;
 
-public class SlimeDamagedState : AbstractDamagedState<SlimeStates, SlimeContext>
+public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>  //AbstractDamagedState<SlimeStates, SlimeContext>
 {
-    public SlimeDamagedState(SlimeContext ctx) : base(SlimeStates.DAMAGEDSTATE, ctx) => this.ctx = ctx;
+    private DamageEvent damageEvent;
+    public SlimeDamagedState(SlimeContext ctx) : base(SlimeStates.DAMAGEDSTATE)
+    {
+        this.ctx = ctx;
+        damageEvent = new(ctx.DamageHandler, ctx.Health, ctx.Animator, ctx.Rb);
+    }
 
+
+    public override void EnterState()
+    {
+        damageEvent.EnterHandler();
+    }
+
+    public override void ExitState()
+    {
+        damageEvent.ExitHandler();
+    }
+    
     public override SlimeStates GetNextState()
     {
         Debug.Log(ctx.DamageHandler.IsDamaged);
         if (!ctx.DamageHandler.IsDamaged)
         {
-            Debug.Log("why am i not here");
-           return SlimeStates.IDLESTATE; 
+            return SlimeStates.IDLESTATE;
         }
-        Debug.Log("fail");
+
         return SlimeStates.DAMAGEDSTATE;
     }
 }

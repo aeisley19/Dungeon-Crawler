@@ -78,30 +78,32 @@
     <Compile Include="Assets/Scripts/IFramesHandler.cs" />
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
     <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
-    <Compile Include="Assets/Scripts/ISharedContext.cs" />
+    <Compile Include="Assets/Scripts/DamageEvent.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerAttackState.cs" />
     <Compile Include="Assets/Scripts/Player/Movement/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyStateManager.cs" />
-    <Compile Include="Assets/Scripts/Enemy/LocatePlayer.cs" />
     <Compile Include="Assets/Scripts/DamageHandler.cs" />
     <Compile Include="Assets/Scripts/ActionCooldown.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDamagedState.cs" />
-    <Compile Include="Assets/Scripts/AbstractDamagedState.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyIdleState.cs" />
     <Compile Include="Assets/Scripts/ICollidable.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeStateManager.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDeathState.cs" />
-    <Compile Include="Assets/Scripts/Enemy/EnemyContext.cs" />
     <Compile Include="Assets/Scripts/HealthManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Slime/SlimeAttackState.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Slime/SlimeApproachingState.cs" />
     <Compile Include="Assets/Scripts/KnockbackHandler.cs" />
     <Compile Include="Assets/Scripts/Enemy/PlayerLocater.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/RotateHitBox.cs" />
+    <Compile Include="Assets/Scripts/IdleMovement.cs" />
     <Compile Include="Assets/Scripts/Player/Movement/MovementAnimation.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerWalkState.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Slime/SlimeMoveState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeIdleState.cs" />
     <Compile Include="Assets/Scripts/Player/Keyboard Input/KeyboardInput.cs" />
+    <Compile Include="Assets/Scripts/DetectCanMove.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerIdleState.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,7 @@ public class PlayerWalkState : AbstractState<PlayerStates, PlayerContext>
 
     public override void EnterState()
     {
+        Debug.Log("Origin");
         hitBoxOrigin = ctx.GameObject.transform.Find("HitBoxOrigin");
         rotateHitBox = hitBoxOrigin.GetComponent<RotateHitBox>();
         isMoving = true;

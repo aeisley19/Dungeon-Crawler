@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 42417534}
   - component: {fileID: 42417532}
   - component: {fileID: 42417533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DamageCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3172,7 +3172,7 @@ GameObject:
   - component: {fileID: 828085016}
   - component: {fileID: 828085024}
   - component: {fileID: 828085026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3837,6 +3837,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103201759}
   m_CullTransparentMesh: 1
+--- !u!1 &1558464627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558464628}
+  - component: {fileID: 1558464629}
+  m_Layer: 0
+  m_Name: WallCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558464628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558464627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1619431472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1558464629
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558464627}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0028852224, y: 0.037619144}
+  m_Radius: 0.3731414
 --- !u!1 &1589594916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,10 +3993,11 @@ GameObject:
   - component: {fileID: 1619431473}
   - component: {fileID: 1619431475}
   - component: {fileID: 1619431474}
-  - component: {fileID: 1619431477}
   - component: {fileID: 1619431476}
   - component: {fileID: 1619431478}
   - component: {fileID: 1619431479}
+  - component: {fileID: 1619431480}
+  - component: {fileID: 1619431481}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -4000,10 +4069,11 @@ Transform:
   m_GameObject: {fileID: 1619431470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3463855, y: 0.63201606, z: 0}
+  m_LocalPosition: {x: 4.71, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1558464628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1619431473
@@ -4077,7 +4147,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 5
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -4090,7 +4160,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1619431476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4105,23 +4175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: {fileID: 1619431474}
   collisionTag: Damageable
---- !u!114 &1619431477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619431470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a5a729cb0752ae8a57dbcb3dad4a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageHandler: {fileID: 1619431476}
-  animator: {fileID: 1619431473}
-  rb: {fileID: 1619431475}
-  col: {fileID: 1619431474}
-  health: {fileID: 1619431478}
 --- !u!114 &1619431478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4147,6 +4200,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611f83db891a8bb369453ec94ba89600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1619431480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ca458700470cd17acd8ebfa90c949b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+--- !u!114 &1619431481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a5a729cb0752ae8a57dbcb3dad4a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageHandler: {fileID: 1619431476}
+  animator: {fileID: 1619431473}
+  rb: {fileID: 1619431475}
+  col: {fileID: 1619431474}
+  health: {fileID: 1619431478}
+  locater: {fileID: 1619431480}
 --- !u!1 &1913957962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4159,7 +4243,7 @@ GameObject:
   - component: {fileID: 1913957964}
   - component: {fileID: 1913957965}
   - component: {fileID: 1913957966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitBoxOrigin
   m_TagString: Damageable
   m_Icon: {fileID: 0}
@@ -4227,7 +4311,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.17683962, y: -0.4789608}
+  m_Offset: {x: 0.021366507, y: -0.4789608}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4237,7 +4321,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3792028, y: 0.49570322}
+  m_Size: {x: 1.775615, y: 0.49570322}
   m_EdgeRadius: 0
 --- !u!114 &1913957966
 MonoBehaviour:
