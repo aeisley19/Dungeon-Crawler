@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>  //AbstractDamagedState<SlimeStates, SlimeContext>
+public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>
 {
     private DamageEvent damageEvent;
     public SlimeDamagedState(SlimeContext ctx) : base(SlimeStates.DAMAGEDSTATE)
@@ -8,7 +8,6 @@ public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>  //Abs
         this.ctx = ctx;
         damageEvent = new(ctx.DamageHandler, ctx.Health, ctx.Animator, ctx.Rb);
     }
-
 
     public override void EnterState()
     {
@@ -19,7 +18,7 @@ public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>  //Abs
     {
         damageEvent.ExitHandler();
     }
-    
+
     public override SlimeStates GetNextState()
     {
         Debug.Log(ctx.DamageHandler.IsDamaged);

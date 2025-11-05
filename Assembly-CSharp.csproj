@@ -67,7 +67,6 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeDamagedState.cs" />
     <Compile Include="Assets/Scripts/Animation Events/IAnimationListener.cs" />
-    <Compile Include="Assets/Scripts/SharedAliveObjectsContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeContext.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractState.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/PlayerAttackHandler.cs" />
@@ -83,6 +82,7 @@
     <Compile Include="Assets/Scripts/Player/Movement/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyStateManager.cs" />
+    <Compile Include="Assets/Scripts/RandomNumber.cs" />
     <Compile Include="Assets/Scripts/DamageHandler.cs" />
     <Compile Include="Assets/Scripts/ActionCooldown.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDamagedState.cs" />

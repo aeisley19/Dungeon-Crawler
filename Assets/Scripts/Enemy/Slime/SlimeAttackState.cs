@@ -18,17 +18,24 @@ public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnima
     {
         isAttacking = true;
         ctx.Animator.SetBool("isAttacking", isAttacking);
+        ctx.MoveTowards = -(ctx.GameObject.transform.position - GameObject.Find("Player").transform.position);
         eventHandler.Subscribe(this);
+    }
+
+    public override void UpdateState()
+    {
+        Debug.Log("position " + ctx.MoveTowards);
+        ctx.Rb.MovePosition(ctx.Rb.position + 1 * Time.deltaTime * ctx.MoveTowards);
     }
 
     public void OnAnimationEvent(string animationEvent)
     {
         if (animationEvent == "AttackEnd") isAttacking = false;
-        Debug.Log("is attacking is" + isAttacking);
     }
     
     public override void ExitState()
     {
+        isAttacking = false;
         ctx.Animator.SetBool("isAttacking", isAttacking);
         eventHandler.UnSubscribe(this);   
     }
@@ -36,6 +43,7 @@ public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnima
     public override SlimeStates GetNextState()
     {
         if (!isAttacking) return SlimeStates.IDLESTATE;
+        if (ctx.DamageHandler.IsDamaged) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.ATTACKSTATE;
     }
 }
