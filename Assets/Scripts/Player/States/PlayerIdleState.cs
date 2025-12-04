@@ -7,7 +7,7 @@ public class PlayerIdleState : AbstractState<PlayerStates, PlayerContext>
 
     public override PlayerStates GetNextState()
     {
-        if (ctx.DamageHandler.IsDamaged) return PlayerStates.DAMAGEDSTATE;
+        if (ctx.DamageHandler.IsTriggered) return PlayerStates.DAMAGEDSTATE;
         if (ctx.InputHandler.GetAttackInput()) return PlayerStates.ATTACKSTATE;
         if (ctx.InputHandler.GetMovementInput() != Vector2.zero) return PlayerStates.WALKSTATE;
 

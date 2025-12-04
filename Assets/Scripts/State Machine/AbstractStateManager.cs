@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public abstract class StateManager<EState, TContext> : MonoBehaviour where EState : Enum
+public abstract class AbstractStateManager<EState, TContext> : MonoBehaviour where EState : Enum
 {
     protected Dictionary<EState, AbstractState<EState, TContext>> states;
     protected AbstractState<EState, TContext> currentState;
@@ -11,7 +11,6 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        Debug.Log("fuckyou " + currentState);
         currentState?.EnterState();
     }
 
@@ -25,21 +24,23 @@ public abstract class StateManager<EState, TContext> : MonoBehaviour where EStat
         else if (!isTransitioningStates) TransitionToState(nextStateKey);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (currentState is ICollidable collidableState)
-        {
-            collidableState.OnTrigger(col);
-        }
-    }
-
     public void TransitionToState(EState stateKey)
     {
-        Debug.Log("fuckme " + currentState);
+        Debug.Log(currentState);
         isTransitioningStates = true;
         currentState.ExitState();
         currentState = states[stateKey];
         currentState.EnterState();
         isTransitioningStates = false;
+    }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if(currentState is ICollidable collidable) collidable.OnCollisionEnter2D(other);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(currentState is ITriggerable triggerable) triggerable.OnTriggerEnter2D(other);
     }
 }

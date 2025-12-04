@@ -25,7 +25,7 @@ public class PlayerDamagedState : AbstractState<PlayerStates, PlayerContext>
     public override PlayerStates GetNextState()
     {
         // if (ctx.Health.Hearts <= 0) return PlayerStates.DEATHSTATE;
-        if (!ctx.DamageHandler.IsDamaged) return PlayerStates.IDLESTATE;
+        if (!ctx.DamageHandler.IsTriggered) return PlayerStates.IDLESTATE;
 
         return PlayerStates.DAMAGEDSTATE;
     }

@@ -9,18 +9,17 @@ public class SlimeMoveState : AbstractState<SlimeStates, SlimeContext>
     public SlimeMoveState(SlimeContext ctx) : base(SlimeStates.MOVESTATE)
     {
         this.ctx = ctx;
-        startPos = ctx.Rb.position; 
+        startPos = ctx.Rb.position;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public override void EnterState()
     {
-        startPos = ctx.Rb.position;   
+        startPos = ctx.Rb.position;
     }
     
     public override void UpdateState()
     {
-        ctx.Rb.MovePosition(ctx.Rb.position + 2 * Time.deltaTime * ctx.MoveTowards);
+        ctx.Rb.MovePosition(ctx.Rb.position + 1 * Time.deltaTime * ctx.MoveTowards);
     }
 
     public override void ExitState()
@@ -30,8 +29,9 @@ public class SlimeMoveState : AbstractState<SlimeStates, SlimeContext>
     
     public override SlimeStates GetNextState()
     {
-        if (ctx.Rb.position == startPos + ctx.MoveTowards) return SlimeStates.IDLESTATE;
-        if (ctx.DamageHandler.IsDamaged) return SlimeStates.DAMAGEDSTATE;
+        if (Vector2.Distance(ctx.Rb.position, startPos + ctx.MoveTowards) < 0.01f) return SlimeStates.IDLESTATE;
+        if (ctx.Detector.Detect(ctx.GameObject, ctx.AttackRadius)) return SlimeStates.PREPARETOATTACKSTATE;
+        if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.MOVESTATE;
     }
 }

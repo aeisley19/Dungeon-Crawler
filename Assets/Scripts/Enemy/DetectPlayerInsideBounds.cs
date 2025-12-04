@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class PlayerLocater : MonoBehaviour
+public class DetectPlayerInsideBounds
 {
-    [SerializeField] private float radius;
-    
-    public bool Locate(GameObject origin)
+    public bool Detect(GameObject origin, float radius)
     {
         return Physics2D.OverlapCircle(origin.transform.position, radius, LayerMask.GetMask("Player"));
     }

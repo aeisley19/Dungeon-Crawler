@@ -6,34 +6,36 @@ public enum SlimeStates
     MOVESTATE,
     DAMAGEDSTATE,
     APPROACHINGSTATE,
+    PREPARETOATTACKSTATE,
     ATTACKSTATE
 } 
 
-public class SlimeStateManager : StateManager<SlimeStates, SlimeContext>
+public class SlimeStateManager : AbstractStateManager<SlimeStates, SlimeContext>
 {
-    [SerializeField] DamageHandler damageHandler;
-    [SerializeField] Animator animator;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] Collider2D col;
-    [SerializeField] HealthManager health;
-    [SerializeField] PlayerLocater locater;
+    [SerializeField] private DamageHandler damageHandler;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Collider2D col;
+    [SerializeField] private HealthManager health;
+    [SerializeField] private float detectionRadius;
+    [SerializeField] private float attackRadius;
 
     SlimeContext ctx;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {
-        ctx = new SlimeContext(gameObject, animator, rb, col, health, damageHandler, locater, Vector2.zero);
+        ctx = new SlimeContext(gameObject, animator, rb, col, health, damageHandler, Vector2.zero, detectionRadius, attackRadius);
 
         states = new Dictionary<SlimeStates, AbstractState<SlimeStates, SlimeContext>>
         {
             { SlimeStates.IDLESTATE, new SlimeIdleState(ctx) },
             { SlimeStates.MOVESTATE, new SlimeMoveState(ctx) },
             { SlimeStates.DAMAGEDSTATE, new SlimeDamagedState(ctx) },
+            { SlimeStates.PREPARETOATTACKSTATE, new SlimePrepareToAttackState(ctx) },
             { SlimeStates.ATTACKSTATE, new SlimeAttackState(ctx)}
         };
 
-        Debug.Log("Why wont you work");
         currentState = states[SlimeStates.IDLESTATE];
 
         base.Start();

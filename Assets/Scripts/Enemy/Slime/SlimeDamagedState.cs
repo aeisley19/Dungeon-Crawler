@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>
 {
-    private DamageEvent damageEvent;
+    private readonly DamageEvent damageEvent;
     public SlimeDamagedState(SlimeContext ctx) : base(SlimeStates.DAMAGEDSTATE)
     {
         this.ctx = ctx;
@@ -21,8 +21,7 @@ public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>
 
     public override SlimeStates GetNextState()
     {
-        Debug.Log(ctx.DamageHandler.IsDamaged);
-        if (!ctx.DamageHandler.IsDamaged)
+        if (!ctx.DamageHandler.IsTriggered)
         {
             return SlimeStates.IDLESTATE;
         }

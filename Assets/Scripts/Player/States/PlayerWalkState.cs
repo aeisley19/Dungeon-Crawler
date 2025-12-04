@@ -19,7 +19,6 @@ public class PlayerWalkState : AbstractState<PlayerStates, PlayerContext>
 
     public override void EnterState()
     {
-        Debug.Log("Origin");
         hitBoxOrigin = ctx.GameObject.transform.Find("HitBoxOrigin");
         rotateHitBox = hitBoxOrigin.GetComponent<RotateHitBox>();
         isMoving = true;
@@ -36,13 +35,12 @@ public class PlayerWalkState : AbstractState<PlayerStates, PlayerContext>
     public override void ExitState()
     {
         isMoving = false;
-        Debug.Log("here");
         ctx.Animator.SetBool("isMoving", isMoving);
     }
 
     public override PlayerStates GetNextState()
     {
-        if (ctx.DamageHandler.IsDamaged) return PlayerStates.DAMAGEDSTATE;
+        if (ctx.DamageHandler.IsTriggered) return PlayerStates.DAMAGEDSTATE;
         if (ctx.InputHandler.GetAttackInput()) return PlayerStates.ATTACKSTATE;
         if (ctx.InputHandler.GetMovementInput() == Vector2.zero) return PlayerStates.IDLESTATE;
 

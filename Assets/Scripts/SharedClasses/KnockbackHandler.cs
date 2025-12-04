@@ -12,7 +12,6 @@ public class KnockbackHandler
 
     public void Knockback(Collider2D other, float knockBackForce)
     {
-        Debug.Log(other.gameObject.name);
         Vector2 direction = (rb.position - (Vector2)other.transform.position).normalized;
         rb.AddForce(direction * knockBackForce, ForceMode2D.Impulse);
     }

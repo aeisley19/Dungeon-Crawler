@@ -59,7 +59,7 @@
     <UnityVersion>6000.0.44f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/home/alex/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.3/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/home/alex/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/home/alex/Unity/Hub/Editor/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/home/alex/Unity/Hub/Editor/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/home/alex/Unity/Hub/Editor/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
@@ -70,40 +70,53 @@
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeContext.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractState.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/PlayerAttackHandler.cs" />
-    <Compile Include="Assets/Scripts/CoroutineCaller.cs" />
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventHandler.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerWallDetector.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerStateManager.cs" />
-    <Compile Include="Assets/Scripts/HealthUI.cs" />
-    <Compile Include="Assets/Scripts/IFramesHandler.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/CoroutineCaller.cs" />
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
-    <Compile Include="Assets/Scripts/State Machine/StateManager.cs" />
-    <Compile Include="Assets/Scripts/DamageEvent.cs" />
+    <Compile Include="Assets/Scripts/Enemy/CollisionHandler.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/DamageHandler.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerAttackState.cs" />
+    <Compile Include="Assets/Scripts/UI/HealthUI.cs" />
     <Compile Include="Assets/Scripts/Player/Movement/PlayerMovement.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerIdleState.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Slime/SlimePrepareToAttackState.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerContext.cs" />
+    <Compile Include="Assets/Scripts/Enemy/PlayerFinder.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyStateManager.cs" />
-    <Compile Include="Assets/Scripts/RandomNumber.cs" />
-    <Compile Include="Assets/Scripts/DamageHandler.cs" />
-    <Compile Include="Assets/Scripts/ActionCooldown.cs" />
+    <Compile Include="Assets/Scripts/Enemy/SpinnerTrigger.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/ActionCooldown.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDamagedState.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyIdleState.cs" />
-    <Compile Include="Assets/Scripts/ICollidable.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/RandomNumber.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/DetectCanMove.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeStateManager.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/IFramesHandler.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/PlayerInPathCheck.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDeathState.cs" />
-    <Compile Include="Assets/Scripts/HealthManager.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/HealthManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerReturnState.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerStateManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerContext.cs" />
+    <Compile Include="Assets/Scripts/Enemy/AbstractDectectPlayer.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeAttackState.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/IdleMovement.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerAttackState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeApproachingState.cs" />
-    <Compile Include="Assets/Scripts/KnockbackHandler.cs" />
-    <Compile Include="Assets/Scripts/Enemy/PlayerLocater.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/RotateHitBox.cs" />
-    <Compile Include="Assets/Scripts/IdleMovement.cs" />
     <Compile Include="Assets/Scripts/Player/Movement/MovementAnimation.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerWalkState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeMoveState.cs" />
+    <Compile Include="Assets/Scripts/Enemy/DetectPlayerInsideBounds.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeIdleState.cs" />
     <Compile Include="Assets/Scripts/Player/Keyboard Input/KeyboardInput.cs" />
-    <Compile Include="Assets/Scripts/DetectCanMove.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/KnockbackHandler.cs" />
+    <Compile Include="Assets/Scripts/Interfaces/ICollidable.cs" />
+    <Compile Include="Assets/Scripts/Interfaces/ITriggerable.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/DamageEvent.cs" />
+    <Compile Include="Assets/Scripts/State Machine/AbstractStateManager.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerIdleState.cs" />
   </ItemGroup>
   <ItemGroup>

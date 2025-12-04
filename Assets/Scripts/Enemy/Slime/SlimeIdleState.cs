@@ -29,19 +29,24 @@ public class SlimeIdleState : AbstractState<SlimeStates, SlimeContext>
 
     public override void UpdateState()
     {
+        //These are the directions that I shoot a raycast to detect "foreground" colliders.
         hitWall[0] = Physics2D.Raycast(ctx.GameObject.transform.position, Vector2.up, 1, LayerMask.GetMask("Foreground"));
         hitWall[1] = Physics2D.Raycast(ctx.GameObject.transform.position, Vector2.right, 1, LayerMask.GetMask("Foreground"));
         hitWall[2] = Physics2D.Raycast(ctx.GameObject.transform.position, Vector2.left, 1, LayerMask.GetMask("Foreground"));
         hitWall[3] = Physics2D.Raycast(ctx.GameObject.transform.position, Vector2.down, 1, LayerMask.GetMask("Foreground"));
 
+        /*Possible directions the enemy can move are all directions excluding the directions the would result in a collision with 
+        foreground. */
         for (int i = 0; i < hitWall.Length; i++)
         {
-            if (hitWall[i]) rand.AddExclude(i);
+            if (hitWall[i]) rand.AddExclude(i); //Adds the direction in which a foreground is located to the exclusion list.
         }
 
         if (timer >= TIMETOMOVE)
         {
 
+            //Generates a random number to determine movement direction excluding the numbers in the exclude list.
+            //May change later to make it more deterministic.
             ctx.MoveTowards = rand.GetNumber(0, hitWall.Length) switch
             {
                 0 => Vector3.up,
@@ -53,7 +58,6 @@ public class SlimeIdleState : AbstractState<SlimeStates, SlimeContext>
 
             if (ctx.MoveTowards != Vector2.zero)
             {
-                Debug.Log("go to" + ctx.MoveTowards);
                 canMove = true;
             }
         }
@@ -70,8 +74,8 @@ public class SlimeIdleState : AbstractState<SlimeStates, SlimeContext>
     public override SlimeStates GetNextState()
     {
         if (canMove) return SlimeStates.MOVESTATE;
-        if (ctx.Locater.Locate(ctx.GameObject)) return SlimeStates.ATTACKSTATE;
-        if (ctx.DamageHandler.IsDamaged) return SlimeStates.DAMAGEDSTATE;
+        if (ctx.Detector.Detect(ctx.GameObject, ctx.AttackRadius)) return SlimeStates.PREPARETOATTACKSTATE;
+        if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.IDLESTATE;
     }
 }

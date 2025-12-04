@@ -1,10 +1,7 @@
-using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnimationListener
 {
-
     private readonly AnimationEventHandler eventHandler;
     private bool isAttacking;
 
@@ -18,14 +15,12 @@ public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnima
     {
         isAttacking = true;
         ctx.Animator.SetBool("isAttacking", isAttacking);
-        ctx.MoveTowards = -(ctx.GameObject.transform.position - GameObject.Find("Player").transform.position);
         eventHandler.Subscribe(this);
     }
 
     public override void UpdateState()
     {
-        Debug.Log("position " + ctx.MoveTowards);
-        ctx.Rb.MovePosition(ctx.Rb.position + 1 * Time.deltaTime * ctx.MoveTowards);
+        ctx.Rb.MovePosition(ctx.Rb.position + 5 * Time.deltaTime * ctx.MoveTowards);
     }
 
     public void OnAnimationEvent(string animationEvent)
@@ -37,13 +32,14 @@ public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnima
     {
         isAttacking = false;
         ctx.Animator.SetBool("isAttacking", isAttacking);
-        eventHandler.UnSubscribe(this);   
+        eventHandler.UnSubscribe(this);
+        ctx.MoveTowards = Vector2.zero;
     }
 
     public override SlimeStates GetNextState()
     {
         if (!isAttacking) return SlimeStates.IDLESTATE;
-        if (ctx.DamageHandler.IsDamaged) return SlimeStates.DAMAGEDSTATE;
+        if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.ATTACKSTATE;
     }
 }

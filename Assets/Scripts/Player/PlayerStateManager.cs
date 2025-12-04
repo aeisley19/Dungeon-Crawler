@@ -10,7 +10,7 @@ public enum PlayerStates
     DAMAGEDSTATE,
     DEATHSTATE
 }
-public class PlayerStateManager : StateManager<PlayerStates, PlayerContext>
+public class PlayerStateManager : AbstractStateManager<PlayerStates, PlayerContext>
 {
     [SerializeField] private float runSpd;
     [SerializeField] private Rigidbody2D rb;

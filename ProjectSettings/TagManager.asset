@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Damageable
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Foreground
   - Hitable
   - Player
-  - 
-  - 
+  - Enemy
+  - Obstacle
   - 
   - 
   - 

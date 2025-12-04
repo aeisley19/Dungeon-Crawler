@@ -9,8 +9,10 @@ public class SlimeApproachingState : AbstractState<SlimeStates, SlimeContext>
 
     public override void UpdateState()
     {
-        base.UpdateState();
+        ctx.MoveTowards = ctx.FindPlayer.GetDirection();
+        ctx.Rb.MovePosition(ctx.Rb.position + 1 * Time.deltaTime * ctx.MoveTowards);
     }
+
     public override SlimeStates GetNextState()
     {
         throw new System.NotImplementedException();
