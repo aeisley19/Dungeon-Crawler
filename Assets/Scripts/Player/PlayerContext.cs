@@ -10,9 +10,11 @@ public class PlayerContext : AbstractContext
     public HealthManager Health { get; protected set; }
     public DamageHandler DamageHandler { get; protected set; }
     public Animator Animator { get; protected set; }
+    public RotateHitBox RotateHitBox { get; }
+    public int RupeeCount { get; }
 
     public PlayerContext(GameObject gameObject, Animator animator, float runSpd, Rigidbody2D rb, Collider2D col,
-        KeyboardInput inputHandler, HealthManager health, DamageHandler damageHandler, HealthUI ui) 
+        KeyboardInput inputHandler, HealthManager health, DamageHandler damageHandler, HealthUI ui, RotateHitBox rotateHitBox) 
         : base(gameObject)
     {
         RunSpd = runSpd;
@@ -23,5 +25,8 @@ public class PlayerContext : AbstractContext
         Health = health;
         DamageHandler = damageHandler;
         Animator = animator;
+        RotateHitBox = rotateHitBox;
     }
+
+  //  public SetRotateHitbox(RotateHitBox)
 }

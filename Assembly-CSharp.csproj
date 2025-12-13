@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeDamagedState.cs" />
+    <Compile Include="Assets/Scripts/RupeePickUp.cs" />
     <Compile Include="Assets/Scripts/Animation Events/IAnimationListener.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeContext.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractState.cs" />
@@ -87,10 +88,12 @@
     <Compile Include="Assets/Scripts/Enemy/EnemyStateManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/SpinnerTrigger.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/ActionCooldown.cs" />
+    <Compile Include="Assets/Scripts/UI/RupeeUI.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDamagedState.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyIdleState.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/RandomNumber.cs" />
+    <Compile Include="Assets/Scripts/Player/RupeeManager.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/DetectCanMove.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeStateManager.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/IFramesHandler.cs" />
@@ -102,7 +105,6 @@
     <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerContext.cs" />
     <Compile Include="Assets/Scripts/Enemy/AbstractDectectPlayer.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeAttackState.cs" />
-    <Compile Include="Assets/Scripts/SharedClasses/IdleMovement.cs" />
     <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerAttackState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeApproachingState.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/RotateHitBox.cs" />
@@ -120,10 +122,33 @@
     <Compile Include="Assets/Scripts/Player/States/PlayerIdleState.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/1_Pixel Art Top Down - Basic v1.2.1/Changelog.txt" />
     <None Include="Assets/0_Top_Down_Adventure_Pack_v.1.0/README.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl" />
     <None Include="Assets/4_Hearts/PNG/health_bar/info.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
     <None Include="Assets/3_Dungeon Gathering Free Version/License.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

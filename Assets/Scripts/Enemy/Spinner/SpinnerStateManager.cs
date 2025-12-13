@@ -10,9 +10,7 @@ public enum SpinnerStates
 
 public class SpinnerStateManager : AbstractStateManager<SpinnerStates, SpinnerContext>
 {
-    [SerializeField] private GameObject origin;
     [SerializeField] private Rigidbody2D rb;
-    //[SerializeField] private PlayerInPathCheck pathChecker;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector2 direction;
     [SerializeField] private SpinnerTrigger spinnerTrigger;

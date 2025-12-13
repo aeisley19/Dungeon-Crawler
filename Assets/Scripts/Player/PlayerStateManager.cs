@@ -19,13 +19,14 @@ public class PlayerStateManager : AbstractStateManager<PlayerStates, PlayerConte
     [SerializeField] private HealthManager health;
     [SerializeField] private DamageHandler damageHandler;
     [SerializeField] private HealthUI ui;
+    [SerializeField] private RotateHitBox rotateHitBox;
     private KeyboardInput inputHandler;
     private PlayerContext ctx;
 
     protected override void Start()
     {
         inputHandler = new KeyboardInput();
-        ctx = new PlayerContext(gameObject, animator, runSpd, rb, col, inputHandler, health, damageHandler, ui);
+        ctx = new PlayerContext(gameObject, animator, runSpd, rb, col, inputHandler, health, damageHandler, ui, rotateHitBox);
 
         states = new Dictionary<PlayerStates, AbstractState<PlayerStates, PlayerContext>>()
          {
@@ -37,7 +38,8 @@ public class PlayerStateManager : AbstractStateManager<PlayerStates, PlayerConte
          };
 
         currentState = states[PlayerStates.IDLESTATE];
-
+        ctx.RotateHitBox.Rotate(new Vector2(ctx.Animator.GetFloat("moveX"), ctx.Animator.GetFloat("moveY")));
+        
         base.Start();
     }
 }
