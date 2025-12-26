@@ -73,6 +73,13 @@ public class SlimeIdleState : AbstractState<SlimeStates, SlimeContext>
 
     public override SlimeStates GetNextState()
     {
+        if(ctx.Health.Hearts <= 0)
+        {
+            ctx.Animator.SetBool("isDamaged", false);
+            Debug.Log("Fuck " + ctx.Animator.GetBool("isDamaged"));
+            return SlimeStates.DEATHSTATE;
+        }
+        
         if (canMove) return SlimeStates.MOVESTATE;
         if (ctx.Detector.Detect(ctx.GameObject, ctx.AttackRadius)) return SlimeStates.PREPARETOATTACKSTATE;
         if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;

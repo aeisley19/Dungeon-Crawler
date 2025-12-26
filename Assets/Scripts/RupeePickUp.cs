@@ -1,19 +1,16 @@
 using UnityEngine;
 
-public class RupeePickUp : MonoBehaviour
+public class RupeePickUp : AbstractPickup
 {
     [SerializeField] private Animator anim;
     [SerializeField] private RupeeUI rupeeUI;
+    [SerializeField] private int rupeeValue;
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public override void PickupAction()
     {
-        if(other.CompareTag("Player")) 
-        {
-            anim.SetBool("pickedUp", true);
-            RupeeManager.Instance.AddRupees(10);
-            rupeeUI.RupeeCounter();
-
-        }
+        anim.SetBool("pickedUp", true);
+        RupeeManager.Instance.AddRupees(rupeeValue);
+        rupeeUI.RupeeCounter();
     }
 
     public void OnEndAnimation()

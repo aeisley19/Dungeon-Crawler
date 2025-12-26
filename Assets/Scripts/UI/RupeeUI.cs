@@ -22,7 +22,7 @@ public class RupeeUI : MonoBehaviour
         {
             currentCount += currentCount < RupeeManager.Instance.RupeeCount ? 1 : -1;
             rupeeText.text = currentCount.ToString();
-            Debug.Log("hereo" + currentCount);
+
             yield return new WaitForSeconds(timeBetweenCountUpdates);
         }
     }

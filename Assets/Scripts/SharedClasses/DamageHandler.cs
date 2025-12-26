@@ -12,5 +12,4 @@ public class DamageHandler : CollisionHandler
             Collider = other;
         }
     }
-
 }

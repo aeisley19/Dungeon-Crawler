@@ -8,8 +8,8 @@ using Unity;
 
 public class RandomNumber
 {
-    private HashSet<int> excludeList = new();
-    Random rand = new Random();
+    private readonly HashSet<int> excludeList = new();
+    private readonly Random rand = new();
 
     public void AddExclude(int exclusion)
     {

@@ -29,6 +29,13 @@ public class SlimePrepareToAttackState : AbstractState<SlimeStates, SlimeContext
 
     public override SlimeStates GetNextState()
     {
+        if(ctx.Health.Hearts <= 0)
+        {
+            ctx.Animator.SetBool("isDamaged", false);
+            Debug.Log("Fuck " + ctx.Animator.GetBool("isDamaged"));
+            return SlimeStates.DEATHSTATE;
+        }
+        
         if (timer >= TIMEREND) return SlimeStates.ATTACKSTATE;
         if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.PREPARETOATTACKSTATE;

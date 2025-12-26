@@ -21,6 +21,7 @@ public class SlimeDamagedState : AbstractState<SlimeStates, SlimeContext>
 
     public override SlimeStates GetNextState()
     {
+
         if (!ctx.DamageHandler.IsTriggered)
         {
             return SlimeStates.IDLESTATE;

@@ -76,6 +76,7 @@
     <Compile Include="Assets/Scripts/Player/PlayerStateManager.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/CoroutineCaller.cs" />
     <Compile Include="Assets/Scripts/Animation Events/AnimationEventReceiver.cs" />
+    <Compile Include="Assets/Scripts/DamageToInflict.cs" />
     <Compile Include="Assets/Scripts/Enemy/CollisionHandler.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/DamageHandler.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerAttackState.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets/Scripts/UI/RupeeUI.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDamagedState.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractContext.cs" />
+    <Compile Include="Assets/Scripts/SharedClasses/PlayerDamageEvent.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyIdleState.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/RandomNumber.cs" />
     <Compile Include="Assets/Scripts/Player/RupeeManager.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Assets/Scripts/Enemy/Spinner/PlayerInPathCheck.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerDeathState.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/HealthManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Slime/SlimeDeathState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerReturnState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerStateManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/Spinner/SpinnerContext.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="Assets/Scripts/Enemy/Spinner/States/SpinnerAttackState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeApproachingState.cs" />
     <Compile Include="Assets/Scripts/Player/Attack/RotateHitBox.cs" />
+    <Compile Include="Assets/Scripts/HeartPickup.cs" />
     <Compile Include="Assets/Scripts/Player/Movement/MovementAnimation.cs" />
     <Compile Include="Assets/Scripts/Player/States/PlayerWalkState.cs" />
     <Compile Include="Assets/Scripts/Enemy/Slime/SlimeMoveState.cs" />
@@ -116,6 +120,7 @@
     <Compile Include="Assets/Scripts/Player/Keyboard Input/KeyboardInput.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/KnockbackHandler.cs" />
     <Compile Include="Assets/Scripts/Interfaces/ICollidable.cs" />
+    <Compile Include="Assets/Scripts/AbstractPickup.cs" />
     <Compile Include="Assets/Scripts/Interfaces/ITriggerable.cs" />
     <Compile Include="Assets/Scripts/SharedClasses/DamageEvent.cs" />
     <Compile Include="Assets/Scripts/State Machine/AbstractStateManager.cs" />

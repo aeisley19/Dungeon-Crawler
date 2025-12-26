@@ -38,6 +38,7 @@ public class SlimeAttackState : AbstractState<SlimeStates, SlimeContext>, IAnima
 
     public override SlimeStates GetNextState()
     {
+        if (ctx.Health.Hearts <= 0) return SlimeStates.DEATHSTATE;
         if (!isAttacking) return SlimeStates.IDLESTATE;
         if (ctx.DamageHandler.IsTriggered) return SlimeStates.DAMAGEDSTATE;
         return SlimeStates.ATTACKSTATE;

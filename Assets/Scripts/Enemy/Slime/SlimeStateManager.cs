@@ -7,7 +7,8 @@ public enum SlimeStates
     DAMAGEDSTATE,
     APPROACHINGSTATE,
     PREPARETOATTACKSTATE,
-    ATTACKSTATE
+    ATTACKSTATE,
+    DEATHSTATE
 } 
 
 public class SlimeStateManager : AbstractStateManager<SlimeStates, SlimeContext>
@@ -33,7 +34,8 @@ public class SlimeStateManager : AbstractStateManager<SlimeStates, SlimeContext>
             { SlimeStates.MOVESTATE, new SlimeMoveState(ctx) },
             { SlimeStates.DAMAGEDSTATE, new SlimeDamagedState(ctx) },
             { SlimeStates.PREPARETOATTACKSTATE, new SlimePrepareToAttackState(ctx) },
-            { SlimeStates.ATTACKSTATE, new SlimeAttackState(ctx)}
+            { SlimeStates.ATTACKSTATE, new SlimeAttackState(ctx) },
+            { SlimeStates.DEATHSTATE, new SlimeDeathState(ctx) }
         };
 
         currentState = states[SlimeStates.IDLESTATE];

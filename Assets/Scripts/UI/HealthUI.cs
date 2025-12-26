@@ -13,6 +13,7 @@ public class HealthUI : MonoBehaviour
     [SerializeField] private Sprite halfHeart;
     [SerializeField] private Sprite quarterHeart;
     [SerializeField] private Sprite emptyHeart;
+    private Heart currentHeart;
     private readonly List<Heart> hearts = new();
 
     public void Awake()
@@ -22,15 +23,18 @@ public class HealthUI : MonoBehaviour
             hearts.Add(new Heart(heartImage, this, 1));
         }
 
+        currentHeart = hearts[healthManager.MaxHearts - 1];
         DisplayHearts();
     }
 
     //Update health ui after damage is taken or player is healed.
     public void DamageUI(float lostHp)
     {
+        Heart currentHeart;
+
         for (int i = healthManager.MaxHearts - 1; i >= 0; i--)
         {
-            Heart currentHeart = hearts[i];
+            currentHeart = hearts[i];
 
             //If lost hp is greater than the number of fragments in the current heart. set the fragments minus the fragments and move on to next heart.
             if (lostHp > currentHeart.Fragments)
@@ -44,12 +48,37 @@ public class HealthUI : MonoBehaviour
             {
                 currentHeart.SetHeartFragments(currentHeart.Fragments - lostHp);
                 print("2 lost " + currentHeart.Fragments);
-              //  print(currentHeart.HeartImage.gameObject.name);
+                //if(currentHeart.Fragments == 0 && currentHeart != hearts[0])
+                //{
+                  //  currentHeart = hearts[i-1];
+               // }
+
                 break;
             }
         }
     }
 
+    public void RegenSingleUI()
+    {   
+        Heart currentHeart;
+        float remainderToHeal = 1;
+
+        for(int i = 0; i < healthManager.MaxHearts; i ++)
+        {
+            currentHeart = hearts[i];
+
+            if(currentHeart.Fragments == 0)
+            {
+                currentHeart.SetHeartFragments(remainderToHeal);
+                break;
+            }
+            else if(currentHeart.Fragments > 0 && currentHeart.Fragments < 1)
+            {
+                remainderToHeal = 1 - currentHeart.Fragments;
+                currentHeart.SetHeartFragments(1); 
+            }
+        }
+    } 
 
     //Display all available hearts up to the maxHearts from healthManager.
     public void DisplayHearts()
@@ -86,7 +115,6 @@ public class HealthUI : MonoBehaviour
 
         public void SetHeartFragments(float fragments)
         {
-            print("oopsy " + fragments);
             switch (fragments)
             {
                 case 0.25f:

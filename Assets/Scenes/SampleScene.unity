@@ -167,7 +167,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -790,6 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 237051709}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &237051709
 Animator:
   serializedVersion: 7
@@ -4023,6 +4024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 568296580}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &568296580
 Animator:
   serializedVersion: 7
@@ -4129,6 +4131,7 @@ GameObject:
   - component: {fileID: 595222007}
   - component: {fileID: 595222006}
   - component: {fileID: 595222005}
+  - component: {fileID: 595222010}
   m_Layer: 11
   m_Name: Spinner
   m_TagString: Enemy
@@ -4308,6 +4311,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &595222010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595222003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6545070fbf664ef9aa3a4e3b167d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,6 +4478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 648571335}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &648571335
 Animator:
   serializedVersion: 7
@@ -4736,6 +4753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 702329360}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &702329360
 Animator:
   serializedVersion: 7
@@ -4842,6 +4860,7 @@ GameObject:
   - component: {fileID: 706731854}
   - component: {fileID: 706731855}
   - component: {fileID: 706731856}
+  - component: {fileID: 706731857}
   m_Layer: 11
   m_Name: Spinner
   m_TagString: Enemy
@@ -5021,6 +5040,19 @@ MonoBehaviour:
   animator: {fileID: 706731848}
   direction: {x: 1, y: 0}
   spinnerTrigger: {fileID: 96628674}
+--- !u!114 &706731857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706731847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6545070fbf664ef9aa3a4e3b167d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &737105956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5038,6 +5070,7 @@ GameObject:
   - component: {fileID: 737105959}
   - component: {fileID: 737105958}
   - component: {fileID: 737105957}
+  - component: {fileID: 737105966}
   m_Layer: 10
   m_Name: Slime (1)
   m_TagString: Enemy
@@ -5258,6 +5291,19 @@ Transform:
   - {fileID: 498449025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737105966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737105956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6545070fbf664ef9aa3a4e3b167d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
 --- !u!1 &752031426
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,6 +6915,7 @@ GameObject:
   - component: {fileID: 903572719}
   - component: {fileID: 903572721}
   - component: {fileID: 903572720}
+  - component: {fileID: 903572722}
   m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Untagged
@@ -9629,6 +9676,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!95 &903572722
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903572718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdc8324f45d440046bfce2c506912c7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &914672394
 GameObject:
   m_ObjectHideFlags: 0
@@ -9699,6 +9768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 914672397}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &914672397
 Animator:
   serializedVersion: 7
@@ -9929,6 +9999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 974131759}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &974131759
 Animator:
   serializedVersion: 7
@@ -10091,6 +10162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1011745438}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1011745438
 Animator:
   serializedVersion: 7
@@ -10328,6 +10400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1117886508}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1117886508
 Animator:
   serializedVersion: 7
@@ -10583,6 +10656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1317986047}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1317986047
 Animator:
   serializedVersion: 7
@@ -10745,6 +10819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1382930415}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1382930415
 Animator:
   serializedVersion: 7
@@ -10907,6 +10982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1392992858}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1392992858
 Animator:
   serializedVersion: 7
@@ -11295,13 +11371,14 @@ GameObject:
   - component: {fileID: 1619431478}
   - component: {fileID: 1619431479}
   - component: {fileID: 1619431481}
+  - component: {fileID: 1619431482}
   m_Layer: 10
   m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1619431471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11366,8 +11443,8 @@ Transform:
   m_GameObject: {fileID: 1619431470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.0031, y: 0.9822, z: 0}
+  m_LocalScale: {x: 1.0061, y: 1.0379, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1558464628}
@@ -11483,7 +11560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be341cbb7c5647b7f95985d1af55a681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHearts: 3
+  maxHearts: 1
 --- !u!114 &1619431479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11515,6 +11592,19 @@ MonoBehaviour:
   health: {fileID: 1619431478}
   detectionRadius: 5
   attackRadius: 3
+--- !u!114 &1619431482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619431470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6545070fbf664ef9aa3a4e3b167d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
 --- !u!1 &1861530218
 GameObject:
   m_ObjectHideFlags: 0
@@ -11641,6 +11731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1861530219}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!58 &1861530223
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11689,6 +11780,7 @@ GameObject:
   - component: {fileID: 1913957964}
   - component: {fileID: 1913957965}
   - component: {fileID: 1913957966}
+  - component: {fileID: 1913957967}
   m_Layer: 9
   m_Name: HitBoxOrigin
   m_TagString: Damageable
@@ -11757,7 +11849,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.021366477, y: -0.524286}
+  m_Offset: {x: 0.039218068, y: -0.21867824}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11767,7 +11859,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.775615, y: 0.5863538}
+  m_Size: {x: 1.5142775, y: 0.85123014}
   m_EdgeRadius: 0
 --- !u!114 &1913957966
 MonoBehaviour:
@@ -11781,6 +11873,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9f634fa2290c794a656fc6ce2d9b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1913957967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913957962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6545070fbf664ef9aa3a4e3b167d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1918936555
 GameObject:
   m_ObjectHideFlags: 0
@@ -11851,6 +11956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1918936558}
   rupeeUI: {fileID: 194861213}
+  rupeeValue: 1
 --- !u!95 &1918936558
 Animator:
   serializedVersion: 7
@@ -12094,6 +12200,169 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082845712}
   m_CullTransparentMesh: 1
+--- !u!1 &2087305136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087305139}
+  - component: {fileID: 2087305138}
+  - component: {fileID: 2087305137}
+  - component: {fileID: 2087305140}
+  - component: {fileID: 2087305141}
+  m_Layer: 0
+  m_Name: HeartPickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &2087305137
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087305136}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.014071465, y: 0.011654079}
+  m_Radius: 0.31595397
+--- !u!212 &2087305138
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087305136}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1850707271
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1124808424, guid: 6b23fcef01240d4008aac03f3c27da35, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.125, y: 1.125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2087305139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087305136}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.227, y: 1.533, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087305140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087305136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddac6c967bc4b335dbfdf18bbb7ade2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 828085026}
+  ui: {fileID: 194861212}
+  heartIncreaseAmount: 1
+--- !u!95 &2087305141
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087305136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f3b248ca1191927f8df91635554a1e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12123,3 +12392,4 @@ SceneRoots:
   - {fileID: 702329362}
   - {fileID: 568296582}
   - {fileID: 648571337}
+  - {fileID: 2087305139}

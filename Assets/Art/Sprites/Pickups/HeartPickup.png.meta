@@ -1,34 +1,43 @@
 fileFormatVersion: 2
-guid: 0954690209a7fed429214cf59b2036cd
+guid: 6b23fcef01240d4008aac03f3c27da35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8320850390699960378
-    second: pinkslime_death_anim_all_dir_strip_8_0
+      213: -2703576718235987106
+    second: HeartPickup_0
   - first:
-      213: 4591080328900260868
-    second: pinkslime_death_anim_all_dir_strip_8_1
+      213: -4548414741882052979
+    second: HeartPickup_1
   - first:
-      213: -3022856101407064435
-    second: pinkslime_death_anim_all_dir_strip_8_2
+      213: 5175695585079781070
+    second: HeartPickup_2
   - first:
-      213: -6614114282850703813
-    second: pinkslime_death_anim_all_dir_strip_8_3
+      213: 3013758385942947475
+    second: HeartPickup_3
   - first:
-      213: 2261691769726961077
-    second: pinkslime_death_anim_all_dir_strip_8_4
+      213: -6999073449415744431
+    second: HeartPickup_4
   - first:
-      213: -8049020436425425073
-    second: pinkslime_death_anim_all_dir_strip_8_5
+      213: -7285464751004683746
+    second: HeartPickup_5
   - first:
-      213: -7657247251772475988
-    second: pinkslime_death_anim_all_dir_strip_8_6
+      213: 462290226821759141
+    second: HeartPickup_6
   - first:
-      213: 4828755346143888261
-    second: pinkslime_death_anim_all_dir_strip_8_7
+      213: -6690128937591854642
+    second: HeartPickup_7
   - first:
-      213: 4179776647224767876
-    second: pinkslime_death_anim_all_dir_strip_8_8
+      213: 3723956597453306684
+    second: HeartPickup_8
+  - first:
+      213: 6009764227257679023
+    second: HeartPickup_9
+  - first:
+      213: 4609894167253316084
+    second: HeartPickup_10
+  - first:
+      213: 1203492702334728455
+    second: HeartPickup_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,177 +146,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_0
+      name: HeartPickup_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6c79829c7a6668c80800000000000000
-      internalID: -8320850390699960378
+      spriteID: 974f64910552869619a064a58f6822a1
+      internalID: -1124808424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_1
+      name: HeartPickup_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 404326b0c3bc6bf30800000000000000
-      internalID: 4591080328900260868
+      spriteID: 9fc59e4319db38c129e2bf6737370e87
+      internalID: 286968141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_2
+      name: HeartPickup_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d8e728c3468ac06d0800000000000000
-      internalID: -3022856101407064435
+      spriteID: 206e096047cbef707a98ad8a4ac0ad3d
+      internalID: -1510092455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_3
+      name: HeartPickup_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b36a8d25a12f534a0800000000000000
-      internalID: -6614114282850703813
+      spriteID: b204bf25c1b4410a88d7bfcdf95f74fd
+      internalID: -1434251636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_4
+      name: HeartPickup_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b5000e7ea4236f10800000000000000
-      internalID: 2261691769726961077
+      spriteID: 92e7223d396a83c28973e2a999c7f43e
+      internalID: -1546724793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_5
+      name: HeartPickup_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f4fb0010f822c4090800000000000000
-      internalID: -8049020436425425073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca5f3c0c13efbb590800000000000000
-      internalID: -7657247251772475988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinkslime_death_anim_all_dir_strip_8_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 583cc2a476f230340800000000000000
-      internalID: 4828755346143888261
+      spriteID: fe58c532923b9bac19dc2c12446d1f9b
+      internalID: -1282206541
       vertices: []
       indices: 
       edges: []
@@ -316,7 +281,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ad05dcf96205ba0179da9c650c2b7698
+    spriteID: caeb63a6998a7fe52b0aabffb701b73a
     internalID: 0
     vertices: []
     indices: 
@@ -326,14 +291,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pinkslime_death_anim_all_dir_strip_8_0: -8320850390699960378
-      pinkslime_death_anim_all_dir_strip_8_1: 4591080328900260868
-      pinkslime_death_anim_all_dir_strip_8_2: -3022856101407064435
-      pinkslime_death_anim_all_dir_strip_8_3: -6614114282850703813
-      pinkslime_death_anim_all_dir_strip_8_4: 2261691769726961077
-      pinkslime_death_anim_all_dir_strip_8_5: -8049020436425425073
-      pinkslime_death_anim_all_dir_strip_8_6: -7657247251772475988
-      pinkslime_death_anim_all_dir_strip_8_7: 4828755346143888261
+      HeartPickup_0: -1124808424
+      HeartPickup_1: 286968141
+      HeartPickup_2: -1510092455
+      HeartPickup_3: -1434251636
+      HeartPickup_4: -1546724793
+      HeartPickup_5: -1282206541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,7 +19,6 @@ public class PlayerAttackState : AbstractState<PlayerStates, PlayerContext>, IAn
         isAttacking = true;
         ctx.Animator.SetBool("isAttacking", true);
         eventHandler.Subscribe(this);
-        Debug.Log(Time.time + "Attacked");
     }
 
     //May need to optomize later.

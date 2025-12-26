@@ -5,7 +5,6 @@ public class PlayerFinder
     private readonly GameObject self;
     private readonly GameObject player;
 
-
     public PlayerFinder(GameObject self, GameObject player)
     {
         this.self = self;
